@@ -3,3 +3,5 @@
 # input for a future code mod (RCS stance on the ground); nothing reads it yet
 rcs_stance.txt export-ignore
 listing/ export-ignore
+.github/ export-ignore
+release-notes/ export-ignore

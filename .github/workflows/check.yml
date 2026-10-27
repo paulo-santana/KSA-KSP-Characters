@@ -1,0 +1,26 @@
+# Blocks a pull request into master that would break the mod or its release:
+# see .github/scripts/check_mod.py. Branch protection requires this check.
+
+name: Check
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  mod:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check the mod and its version
+        run: python3 .github/scripts/check_mod.py "origin/${{ github.base_ref }}"
+
+      - name: Build the zip as a release would
+        run: |
+          git archive --format=zip --prefix=KSP-Characters/ -o mod.zip HEAD
+          unzip -l mod.zip | grep -q " KSP-Characters/mod.toml$" || { echo "the zip has no KSP-Characters/mod.toml"; exit 1; }
+          if unzip -Z1 mod.zip | grep -vq "^KSP-Characters/"; then echo "the zip has files outside KSP-Characters/"; exit 1; fi
+          unzip -l mod.zip | tail -1

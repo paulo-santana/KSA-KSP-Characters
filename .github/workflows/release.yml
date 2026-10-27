@@ -1,0 +1,95 @@
+# A merge to master that brings a new version in mod.toml publishes it: tag
+# v<version>, one zip, uploaded to the GitHub release and to SpaceDock. Borea
+# picks the new SpaceDock version up on its own (SpaceDock is the authority in
+# the content-index listing). The forum thread is still updated by hand.
+# A merge that keeps the version (README, workflows...) publishes nothing.
+# check.yml makes sure a pull request that changes shipped files bumps the
+# version and has release-notes/v<version>.md.
+#
+# Needs, in the repository settings:
+#   variable SPACEDOCK_USERNAME, secret SPACEDOCK_PASSWORD
+#   optional variable SPACEDOCK_GAME_VERSION (default: SpaceDock's newest KSA version)
+
+name: Release
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+
+env:
+  SPACEDOCK_MOD_ID: "4753"
+  SPACEDOCK_GAME_ID: "22409"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Is there a new version?
+        id: version
+        run: |
+          version="$(sed -n 's/^version = "\(.*\)"$/\1/p' mod.toml)"
+          tag="v${version}"
+          if git rev-parse -q --verify "refs/tags/${tag}" >/dev/null; then
+            echo "${tag} is already released; nothing to publish."
+            echo "new=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          test -s "release-notes/${tag}.md" \
+            || { echo "release-notes/${tag}.md is missing or empty"; exit 1; }
+          echo "new=true" >> "$GITHUB_OUTPUT"
+          echo "VERSION=${version}" >> "$GITHUB_ENV"
+          echo "TAG=${tag}" >> "$GITHUB_ENV"
+          echo "ZIP=KSP-Characters-${tag}.zip" >> "$GITHUB_ENV"
+
+      - name: Check the mod
+        if: steps.version.outputs.new == 'true'
+        run: python3 .github/scripts/check_mod.py
+
+      - name: Build the zip
+        if: steps.version.outputs.new == 'true'
+        run: git archive --format=zip --prefix=KSP-Characters/ -o "$ZIP" HEAD
+
+      - name: GitHub release (creates the tag)
+        if: steps.version.outputs.new == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$TAG" "$ZIP" --target "$GITHUB_SHA" \
+            --title "KSP Characters ${VERSION}" \
+            --notes-file "release-notes/${TAG}.md"
+
+      - name: SpaceDock upload
+        if: steps.version.outputs.new == 'true'
+        env:
+          SD_USER: ${{ vars.SPACEDOCK_USERNAME }}
+          SD_PASS: ${{ secrets.SPACEDOCK_PASSWORD }}
+          SD_GAME_VERSION: ${{ vars.SPACEDOCK_GAME_VERSION }}
+        run: |
+          game_version="${SD_GAME_VERSION:-$(curl -sf "https://spacedock.info/api/${SPACEDOCK_GAME_ID}/versions" | jq -r '.[0].friendly_version')}"
+          echo "SpaceDock game version: ${game_version}"
+          curl -s -c cookies --form-string "username=${SD_USER}" --form-string "password=${SD_PASS}" \
+            https://spacedock.info/api/login > login.json
+          if [ "$(jq -r .error login.json)" = "true" ]; then
+            echo "SpaceDock login failed: $(jq -r .reason login.json)"; exit 1
+          fi
+          curl -s -b cookies \
+            --form-string "version=${VERSION}" \
+            -F "changelog=<release-notes/${TAG}.md" \
+            --form-string "game-version=${game_version}" \
+            --form-string "notify-followers=yes" \
+            -F "zipball=@${ZIP}" \
+            "https://spacedock.info/api/mod/${SPACEDOCK_MOD_ID}/update" > update.json
+          cat update.json; echo
+          if [ "$(jq -r .error update.json)" = "true" ]; then
+            echo "SpaceDock upload failed: $(jq -r .reason update.json)"; exit 1
+          fi
