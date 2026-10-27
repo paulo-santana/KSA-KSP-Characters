@@ -6,3 +6,10 @@ Kerbal Tumble KerbalAnimJpSuspendedGlb
 Kerbal JumpLand KerbalAnimJpJumpStillEndGlb
 Kerbal MoonWalk KerbalAnimJpWkCLoGForwardGlb
 Kerbal MoonRun KerbalAnimJpWkCLoGForwardGlb
+KerbalScientist Idle KerbalAnimJpIdleGlb
+KerbalScientist Walk KerbalAnimJpWkCForwardGlb
+KerbalScientist Jump KerbalAnimJpJumpStillStartGlb
+KerbalScientist Tumble KerbalAnimJpSuspendedGlb
+KerbalScientist JumpLand KerbalAnimJpJumpStillEndGlb
+KerbalScientist MoonWalk KerbalAnimJpWkCLoGForwardGlb
+KerbalScientist MoonRun KerbalAnimJpWkCLoGForwardGlb
