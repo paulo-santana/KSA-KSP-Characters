@@ -1,6 +1,6 @@
 # KSP Characters for Kitten Space Agency
 
-Adds the Kerbal from Kerbal Space Program as a playable crew character in KSA: body, helmet, visor, jetpack (the game's own MMU), and KSP's own animations. It comes in two suits, each its own character: KSP's white EVA suit (`Kerbal`) and an orange one (`KerbalOrange`), a recolor of the same suit.
+Adds the Kerbal from Kerbal Space Program as a playable crew character in KSA: body, helmet, visor, jetpack (the game's own MMU), and KSP's own animations. It comes in two suits, each its own character: KSP's white EVA suit (`Kerbal`) and an orange one with an orange helmet (`KerbalOrange`), a recolor of the same suit.
 
 ## Install
 
@@ -16,7 +16,7 @@ If the Kerbal does not show up, open `Documents/My Games/Kitten Space Agency/man
 * `KerbalAssets.xml`: the character definition (Id `Kerbal`).
 * `Characters/Kerbal/`: body, helmet, visor and the animations, one file per KSP clip (slots that play the same clip share it).
 * `Characters/KittenMMU/`, `Textures/Characters/`: the game's own jetpack, copied so the folder works on its own.
-* `Textures/Kerbal/`: the Kerbal's textures (`Body_A.png` is the white suit, `Body_Orange.png` the orange one).
+* `Textures/Kerbal/`: the Kerbal's textures (`Body_A.png` and `Helmet_A.png` are the white suit, `Body_Orange.png` and `Helmet_Orange.png` the orange one).
 
 ## Credits and legal
 

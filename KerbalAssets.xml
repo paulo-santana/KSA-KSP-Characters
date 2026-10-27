@@ -176,6 +176,16 @@
         </Materials>
         <AttachmentType>Helmet</AttachmentType>
     </CharacterAttachment>
+    <CharacterAttachment Id="KerbalOrangeHelmetAttachment">
+        <Source Id="KerbalHelmetGlb"/>
+        <Socket Name="Head_M"/>
+        <Materials>
+            <Diffuse Path="Textures/Kerbal/Helmet_Orange.png" Category="Default"/>
+            <Normal Id="KerbalEmptyNormal"/>
+            <AoRoughMetal Path="Textures/Kerbal/ORM.png" Category="Default"/>
+        </Materials>
+        <AttachmentType>Helmet</AttachmentType>
+    </CharacterAttachment>
     <CharacterAttachment Id="KerbalMMUAttachment">
         <Source Id="KerbalMMUGlb"/>
         <Socket Name="Chest_M"/>
@@ -247,7 +257,7 @@
         <Personality Value="Neutral"/>
         <CharacterCore Id="KerbalCore"/>
         <CharacterTextures Id="KerbalOrangeTextures"/>
-        <CharacterHelmet Id="KerbalHelmetAttachment"/>
+        <CharacterHelmet Id="KerbalOrangeHelmetAttachment"/>
         <CharacterVisor Id="KerbalVisorAttachment"/>
         <CharacterMMU Id="KerbalMMUAttachment"/>
         <CharacterFur Id="KerbalFur"/>
