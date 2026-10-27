@@ -111,8 +111,8 @@
         <Normal Id="KerbalEmptyNormal"/>
         <AoRoughMetal Path="Textures/Kerbal/ORM.png" Category="Default"/>
     </PbrMaterial>
-    <PbrMaterial Id="KerbalScientistBody">
-        <Diffuse Path="Textures/Kerbal/Body_Scientist.png" Category="Default"/>
+    <PbrMaterial Id="KerbalOrangeBody">
+        <Diffuse Path="Textures/Kerbal/Body_Orange.png" Category="Default"/>
         <Normal Id="KerbalEmptyNormal"/>
         <AoRoughMetal Path="Textures/Kerbal/ORM.png" Category="Default"/>
     </PbrMaterial>
@@ -131,8 +131,8 @@
         <CharacterHeadMaterial Id="KerbalHead"/>
         <CharacterEyeMaterial Id="KerbalEye"/>
     </CharacterTextures>
-    <CharacterTextures Id="KerbalScientistTextures">
-        <CharacterBodyMaterial Id="KerbalScientistBody"/>
+    <CharacterTextures Id="KerbalOrangeTextures">
+        <CharacterBodyMaterial Id="KerbalOrangeBody"/>
         <CharacterHeadMaterial Id="KerbalHead"/>
         <CharacterEyeMaterial Id="KerbalEye"/>
     </CharacterTextures>
@@ -243,10 +243,10 @@
         <CharacterAnimationMasks Id="KerbalAnimationMasks"/>
         <CharacterGroundAnimations Id="KerbalGroundAnimations"/>
     </Character>
-    <Character Id="KerbalScientist">
+    <Character Id="KerbalOrange">
         <Personality Value="Neutral"/>
         <CharacterCore Id="KerbalCore"/>
-        <CharacterTextures Id="KerbalScientistTextures"/>
+        <CharacterTextures Id="KerbalOrangeTextures"/>
         <CharacterHelmet Id="KerbalHelmetAttachment"/>
         <CharacterVisor Id="KerbalVisorAttachment"/>
         <CharacterMMU Id="KerbalMMUAttachment"/>
