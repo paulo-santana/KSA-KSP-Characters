@@ -27,3 +27,19 @@ name = "Kerbal (female, orange suit)"
 names = "names/kerbal_names.txt"
 pools = ["common-f", "special-f"]
 surname = "Kerman"
+
+[[crew]]
+name = "Jebediah Kerman"
+character = "KerbalOrange"
+
+[[crew]]
+name = "Bill Kerman"
+character = "KerbalOrange"
+
+[[crew]]
+name = "Bob Kerman"
+character = "KerbalOrange"
+
+[[crew]]
+name = "Valentina Kerman"
+character = "KerbalFemaleOrange"
