@@ -23,6 +23,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 SEMVER = re.compile(r"^(\d+)\.(\d+)\.(\d+)$")
 errors = []
+earlier_ids = set()  # Ids defined by the asset files mod.toml lists before the current one
+used_paths = set()  # files any asset file refers to
 
 
 def error(msg):
@@ -99,6 +101,10 @@ def check_files():
             error(f"{asset}: {e}")
             continue
         check_assets(asset, root)
+        earlier_ids.update(el.attrib["Id"] for el in root if "Id" in el.attrib)
+    shipped = set(git("ls-files", "Characters", "Textures").split())
+    for f in sorted(shipped - used_paths):
+        print(f"::warning::{f} ships in the zip but no asset file uses it")
     return version
 
 
@@ -115,7 +121,7 @@ def check_assets(asset, root):
         for el in top.iter():
             if el is top or "Id" not in el.attrib:
                 continue
-            if el.attrib["Id"] not in defined:
+            if el.attrib["Id"] not in defined and el.attrib["Id"] not in earlier_ids:
                 error(f"{asset}: <{el.tag} Id=\"{el.attrib['Id']}\"> inside {top.attrib.get('Id', top.tag)} points at nothing")
 
     used = set()
@@ -184,9 +190,7 @@ def check_assets(asset, root):
             if e.tag in ("HeadMeshIndices", "FurMeshIndex") and int(e.attrib["Value"]) >= meshes:
                 error(f"{asset}: <{e.tag} Value=\"{e.attrib['Value']}\"> but {body.attrib['Id']} has {meshes} meshes")
 
-    shipped = set(git("ls-files", "Characters", "Textures").split())
-    for f in sorted(shipped - used - {s.attrib["Path"] for s in root.iter("Source") if "Path" in s.attrib}):
-        print(f"::warning::{f} ships in the zip but {asset} never uses it")
+    used_paths.update(used)
 
 
 def version_key(v):
