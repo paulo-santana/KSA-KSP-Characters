@@ -107,7 +107,7 @@
         <Skeleton Id="KerbalGlb"/>
     </GltfFile>
     <PbrMaterial Id="KerbalBody">
-        <Diffuse Path="Textures/Kerbal/Body_A.png" Category="Default"/>
+        <Diffuse Path="Textures/Kerbal/Body.png" Category="Default"/>
         <Normal Id="KerbalEmptyNormal"/>
         <AoRoughMetal Path="Textures/Kerbal/ORM.png" Category="Default"/>
     </PbrMaterial>
@@ -170,7 +170,7 @@
         <Source Id="KerbalHelmetGlb"/>
         <Socket Name="Head_M"/>
         <Materials>
-            <Diffuse Path="Textures/Kerbal/Helmet_A.png" Category="Default"/>
+            <Diffuse Path="Textures/Kerbal/Body.png" Category="Default"/>
             <Normal Id="KerbalEmptyNormal"/>
             <AoRoughMetal Path="Textures/Kerbal/ORM.png" Category="Default"/>
         </Materials>
@@ -180,7 +180,7 @@
         <Source Id="KerbalHelmetGlb"/>
         <Socket Name="Head_M"/>
         <Materials>
-            <Diffuse Path="Textures/Kerbal/Helmet_Orange.png" Category="Default"/>
+            <Diffuse Path="Textures/Kerbal/Body_Orange.png" Category="Default"/>
             <Normal Id="KerbalEmptyNormal"/>
             <AoRoughMetal Path="Textures/Kerbal/ORM.png" Category="Default"/>
         </Materials>
