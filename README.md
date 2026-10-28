@@ -1,6 +1,6 @@
 # KSP Characters for Kitten Space Agency
 
-Adds the Kerbals from Kerbal Space Program as playable crew characters in KSA: body, helmet, visor, jetpack (the game's own MMU), and KSP's own animations. There are four characters, a male and a female Kerbal, each in two suits: KSP's white EVA suit and an orange one with an orange helmet, a recolor of the same suit.
+Adds the Kerbals from Kerbal Space Program as playable crew characters in KSA: body, helmet, visor, jetpack (the game's own MMU), and KSP's own animations. There are four characters, a male and a female Kerbal, each in two suits: KSP's white and orange EVA suits, as KSP draws them today.
 
 | Character | Kerbal | Suit |
 | --- | --- | --- |
@@ -23,7 +23,7 @@ If the Kerbal does not show up, open `Documents/My Games/Kitten Space Agency/man
 * `KerbalAssets.xml`, `KerbalFemaleAssets.xml`: the character definitions, male and female.
 * `Characters/Kerbal/`, `Characters/KerbalFemale/`: body, helmet, visor and the animations, one file per KSP clip (slots that play the same clip share it). The female Kerbal has her own body and her own set of KSP's clips.
 * `Characters/KittenMMU/`, `Textures/Characters/`: the game's own jetpack, copied so the folder works on its own.
-* `Textures/Kerbal/`, `Textures/KerbalFemale/`: the textures (`Body_A.png` and `Helmet_A.png` are the white suit, `Body_Orange.png` and `Helmet_Orange.png` the orange one).
+* `Textures/Kerbal/`: the suit textures every Kerbal wears (`Body.png` the white suit, `Body_Orange.png` the orange one; the helmet uses the same file) and the male head. `Textures/KerbalFemale/`: her head.
 * `characters.toml`, `names/`: display names and KSP's Kerbal name lists, for the optional Character Manager mod. The game itself ignores them.
 
 ## Credits and legal
