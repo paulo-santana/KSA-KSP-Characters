@@ -97,6 +97,34 @@
         <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_JpWkCLoGForward.glb"/>
         <Skeleton Id="KerbalFemaleGlb"/>
     </GltfFile>
+    <GltfFile Id="KerbalFemaleAnimIdleAGlb">
+        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleA.glb"/>
+        <Skeleton Id="KerbalFemaleGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalFemaleAnimIdleBGlb">
+        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleB.glb"/>
+        <Skeleton Id="KerbalFemaleGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalFemaleAnimIdleCGlb">
+        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleC.glb"/>
+        <Skeleton Id="KerbalFemaleGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalFemaleAnimIdleDGlb">
+        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleD.glb"/>
+        <Skeleton Id="KerbalFemaleGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalFemaleAnimIdleEGlb">
+        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleE.glb"/>
+        <Skeleton Id="KerbalFemaleGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalFemaleAnimIdleGGlb">
+        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleG.glb"/>
+        <Skeleton Id="KerbalFemaleGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalFemaleAnimIdleIGlb">
+        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleI.glb"/>
+        <Skeleton Id="KerbalFemaleGlb"/>
+    </GltfFile>
     <PbrMaterial Id="KerbalFemaleBody">
         <Diffuse Path="Textures/Kerbal/Body.png" Category="Default"/>
         <Normal Id="KerbalEmptyNormal"/>
@@ -199,6 +227,13 @@
     </CharacterMMUAnimations>
     <CharacterGroundAnimations Id="KerbalFemaleGroundAnimations">
         <AnimIdle Id="KerbalFemaleAnimIdleGlb"/>
+        <CharacterManager.AnimIdleAction Id="KerbalFemaleAnimIdleAGlb"/>
+        <CharacterManager.AnimIdleAction Id="KerbalFemaleAnimIdleBGlb"/>
+        <CharacterManager.AnimIdleAction Id="KerbalFemaleAnimIdleCGlb"/>
+        <CharacterManager.AnimIdleAction Id="KerbalFemaleAnimIdleDGlb"/>
+        <CharacterManager.AnimIdleAction Id="KerbalFemaleAnimIdleEGlb"/>
+        <CharacterManager.AnimIdleAction Id="KerbalFemaleAnimIdleGGlb"/>
+        <CharacterManager.AnimIdleAction Id="KerbalFemaleAnimIdleIGlb"/>
         <AnimWalk Id="KerbalFemaleAnimWkCForwardGlb"/>
         <AnimRun Id="KerbalFemaleAnimWkCRunGlb"/>
         <AnimLadder Id="KerbalFemaleAnimLadderUpGlb"/>
