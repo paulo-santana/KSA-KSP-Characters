@@ -106,6 +106,34 @@
         <Source Path="Characters/Kerbal/Anim/ANI_KSP_JpWkCLoGForward.glb"/>
         <Skeleton Id="KerbalGlb"/>
     </GltfFile>
+    <GltfFile Id="KerbalAnimIdleAGlb">
+        <Source Path="Characters/Kerbal/Anim/ANI_KSP_IdleA.glb"/>
+        <Skeleton Id="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimIdleBGlb">
+        <Source Path="Characters/Kerbal/Anim/ANI_KSP_IdleB.glb"/>
+        <Skeleton Id="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimIdleCGlb">
+        <Source Path="Characters/Kerbal/Anim/ANI_KSP_IdleC.glb"/>
+        <Skeleton Id="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimIdleDGlb">
+        <Source Path="Characters/Kerbal/Anim/ANI_KSP_IdleD.glb"/>
+        <Skeleton Id="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimIdleFGlb">
+        <Source Path="Characters/Kerbal/Anim/ANI_KSP_IdleF.glb"/>
+        <Skeleton Id="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimIdleGGlb">
+        <Source Path="Characters/Kerbal/Anim/ANI_KSP_IdleG.glb"/>
+        <Skeleton Id="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimIdleIGlb">
+        <Source Path="Characters/Kerbal/Anim/ANI_KSP_IdleI.glb"/>
+        <Skeleton Id="KerbalGlb"/>
+    </GltfFile>
     <PbrMaterial Id="KerbalBody">
         <Diffuse Path="Textures/Kerbal/Body.png" Category="Default"/>
         <Normal Id="KerbalEmptyNormal"/>
@@ -228,6 +256,13 @@
     </CharacterMMUAnimations>
     <CharacterGroundAnimations Id="KerbalGroundAnimations">
         <AnimIdle Id="KerbalAnimIdleGlb"/>
+        <CharacterManager.AnimIdleAction Id="KerbalAnimIdleAGlb"/>
+        <CharacterManager.AnimIdleAction Id="KerbalAnimIdleBGlb"/>
+        <CharacterManager.AnimIdleAction Id="KerbalAnimIdleCGlb"/>
+        <CharacterManager.AnimIdleAction Id="KerbalAnimIdleDGlb"/>
+        <CharacterManager.AnimIdleAction Id="KerbalAnimIdleFGlb"/>
+        <CharacterManager.AnimIdleAction Id="KerbalAnimIdleGGlb"/>
+        <CharacterManager.AnimIdleAction Id="KerbalAnimIdleIGlb"/>
         <AnimWalk Id="KerbalAnimWkCForwardGlb"/>
         <AnimRun Id="KerbalAnimWkCRunGlb"/>
         <AnimLadder Id="KerbalAnimLadderUpGlb"/>
