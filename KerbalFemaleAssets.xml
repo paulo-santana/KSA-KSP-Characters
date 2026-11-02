@@ -125,6 +125,14 @@
         <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleI.glb"/>
         <Skeleton Id="KerbalFemaleGlb"/>
     </GltfFile>
+    <GltfFile Id="KerbalFemaleAnimLadderIdleGlb">
+        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_LadderIdle.glb"/>
+        <Skeleton Id="KerbalFemaleGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalFemaleAnimLadderDownGlb">
+        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_LadderDown.glb"/>
+        <Skeleton Id="KerbalFemaleGlb"/>
+    </GltfFile>
     <PbrMaterial Id="KerbalFemaleBody">
         <Diffuse Path="Textures/Kerbal/Body.png" Category="Default"/>
         <Normal Id="KerbalEmptyNormal"/>
@@ -237,6 +245,8 @@
         <AnimWalk Id="KerbalFemaleAnimWkCForwardGlb"/>
         <AnimRun Id="KerbalFemaleAnimWkCRunGlb"/>
         <AnimLadder Id="KerbalFemaleAnimLadderUpGlb"/>
+        <CharacterManager.AnimLadderIdle Id="KerbalFemaleAnimLadderIdleGlb"/>
+        <CharacterManager.AnimLadderDown Id="KerbalFemaleAnimLadderDownGlb"/>
         <AnimJump Id="KerbalFemaleAnimJumpStillStartGlb"/>
         <AnimTumble Id="KerbalFemaleAnimSuspendedGlb"/>
         <AnimJumpLand Id="KerbalFemaleAnimJumpStillEndGlb"/>
