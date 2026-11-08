@@ -1,247 +1,320 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- KSA's XML format since 2026.11.10.5801: Id only names a top-level asset (a File, a Texture, a material...), every reference
+     to one is a Ref, and lists sit in their own container element. Ids are global across mods, hence the KSPCharacters. prefix
+     of the File and Texture ids. -->
 <Assets>
+    <File Id="KSPCharacters.Characters.KerbalFemale.KSP_KerbalFemale" Path="Characters/KerbalFemale/KSP_KerbalFemale.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.KSP_KerbalFemale_Helmet" Path="Characters/KerbalFemale/KSP_KerbalFemale_Helmet.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.KSP_KerbalFemale_Visor" Path="Characters/KerbalFemale/KSP_KerbalFemale_Visor.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.KSP_KerbalFemale_Jetpack" Path="Characters/KerbalFemale/KSP_KerbalFemale_Jetpack.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.KSP_KerbalFemale_JetpackArms" Path="Characters/KerbalFemale/KSP_KerbalFemale_JetpackArms.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.KSP_KerbalFemale_JetpackArmsExtend" Path="Characters/KerbalFemale/KSP_KerbalFemale_JetpackArmsExtend.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_Idle" Path="Characters/KerbalFemale/Anim/ANI_KSP_Idle.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_WkCForward" Path="Characters/KerbalFemale/Anim/ANI_KSP_WkCForward.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_WkCRun" Path="Characters/KerbalFemale/Anim/ANI_KSP_WkCRun.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_LadderUp" Path="Characters/KerbalFemale/Anim/ANI_KSP_LadderUp.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_JumpStillStart" Path="Characters/KerbalFemale/Anim/ANI_KSP_JumpStillStart.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_Suspended" Path="Characters/KerbalFemale/Anim/ANI_KSP_Suspended.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_JumpStillEnd" Path="Characters/KerbalFemale/Anim/ANI_KSP_JumpStillEnd.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_WkCLoGForward" Path="Characters/KerbalFemale/Anim/ANI_KSP_WkCLoGForward.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_SwimForward" Path="Characters/KerbalFemale/Anim/ANI_KSP_SwimForward.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_SwimIdle" Path="Characters/KerbalFemale/Anim/ANI_KSP_SwimIdle.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_Docking" Path="Characters/KerbalFemale/Anim/ANI_KSP_Docking.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_JpSuspended" Path="Characters/KerbalFemale/Anim/ANI_KSP_JpSuspended.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_ExpScared" Path="Characters/KerbalFemale/Anim/ANI_KSP_ExpScared.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_ExpHappy" Path="Characters/KerbalFemale/Anim/ANI_KSP_ExpHappy.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_ExpSad" Path="Characters/KerbalFemale/Anim/ANI_KSP_ExpSad.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_ExpAngry" Path="Characters/KerbalFemale/Anim/ANI_KSP_ExpAngry.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_ExpAwe" Path="Characters/KerbalFemale/Anim/ANI_KSP_ExpAwe.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_JpIdle" Path="Characters/KerbalFemale/Anim/ANI_KSP_JpIdle.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_JpWkCForward" Path="Characters/KerbalFemale/Anim/ANI_KSP_JpWkCForward.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_JpJumpStillStart" Path="Characters/KerbalFemale/Anim/ANI_KSP_JpJumpStillStart.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_JpJumpStillEnd" Path="Characters/KerbalFemale/Anim/ANI_KSP_JpJumpStillEnd.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_JpWkCLoGForward" Path="Characters/KerbalFemale/Anim/ANI_KSP_JpWkCLoGForward.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_IdleA" Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleA.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_IdleB" Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleB.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_IdleC" Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleC.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_IdleD" Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleD.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_IdleE" Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleE.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_IdleG" Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleG.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_IdleI" Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleI.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_LadderIdle" Path="Characters/KerbalFemale/Anim/ANI_KSP_LadderIdle.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_LadderDown" Path="Characters/KerbalFemale/Anim/ANI_KSP_LadderDown.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_OpenJetpack" Path="Characters/KerbalFemale/Anim/ANI_KSP_OpenJetpack.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_CloseJetpack" Path="Characters/KerbalFemale/Anim/ANI_KSP_CloseJetpack.glb"/>
+    <Texture Id="KSPCharacters.Textures.KerbalFemale.Head" Path="Textures/KerbalFemale/Head.png" Category="Default"/>
     <GltfFile Id="KerbalFemaleGlb">
-        <Source Path="Characters/KerbalFemale/KSP_KerbalFemale.glb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.KSP_KerbalFemale"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleHelmetGlb">
-        <Source Path="Characters/KerbalFemale/KSP_KerbalFemale_Helmet.glb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.KSP_KerbalFemale_Helmet"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleVisorGlb">
-        <Source Path="Characters/KerbalFemale/KSP_KerbalFemale_Visor.glb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.KSP_KerbalFemale_Visor"/>
     </GltfFile>
-    <!-- KSP's own jetpack: the pack, tanks, thrusters and folding control arms, on their own bones -->
     <GltfFile Id="KerbalFemaleJetpackGlb">
-        <Source Path="Characters/KerbalFemale/KSP_KerbalFemale_Jetpack.glb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.KSP_KerbalFemale_Jetpack"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleJetpackArmsGlb">
-        <Source Path="Characters/KerbalFemale/KSP_KerbalFemale_JetpackArms.glb"/>
-        <Skeleton Id="KerbalFemaleJetpackGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.KSP_KerbalFemale_JetpackArms"/>
+        <Skeleton Ref="KerbalFemaleJetpackGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleJetpackArmsExtendGlb">
-        <Source Path="Characters/KerbalFemale/KSP_KerbalFemale_JetpackArmsExtend.glb"/>
-        <Skeleton Id="KerbalFemaleJetpackGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.KSP_KerbalFemale_JetpackArmsExtend"/>
+        <Skeleton Ref="KerbalFemaleJetpackGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimIdleGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_Idle.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_Idle"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimWkCForwardGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_WkCForward.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_WkCForward"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimWkCRunGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_WkCRun.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_WkCRun"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimLadderUpGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_LadderUp.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_LadderUp"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimJumpStillStartGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_JumpStillStart.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_JumpStillStart"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimSuspendedGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_Suspended.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_Suspended"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimJumpStillEndGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_JumpStillEnd.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_JumpStillEnd"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimWkCLoGForwardGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_WkCLoGForward.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_WkCLoGForward"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimSwimForwardGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_SwimForward.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_SwimForward"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimSwimIdleGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_SwimIdle.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_SwimIdle"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimDockingGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_Docking.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_Docking"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimJpSuspendedGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_JpSuspended.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_JpSuspended"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimExpScaredGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_ExpScared.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_ExpScared"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimExpHappyGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_ExpHappy.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_ExpHappy"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimExpSadGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_ExpSad.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_ExpSad"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimExpAngryGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_ExpAngry.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_ExpAngry"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimExpAweGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_ExpAwe.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_ExpAwe"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimJpIdleGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_JpIdle.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_JpIdle"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimJpWkCForwardGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_JpWkCForward.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_JpWkCForward"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimJpJumpStillStartGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_JpJumpStillStart.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_JpJumpStillStart"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimJpJumpStillEndGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_JpJumpStillEnd.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_JpJumpStillEnd"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimJpWkCLoGForwardGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_JpWkCLoGForward.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_JpWkCLoGForward"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimIdleAGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleA.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_IdleA"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimIdleBGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleB.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_IdleB"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimIdleCGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleC.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_IdleC"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimIdleDGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleD.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_IdleD"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimIdleEGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleE.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_IdleE"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimIdleGGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleG.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_IdleG"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimIdleIGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleI.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_IdleI"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimLadderIdleGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_LadderIdle.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_LadderIdle"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimLadderDownGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_LadderDown.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_LadderDown"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimOpenJetpackGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_OpenJetpack.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_OpenJetpack"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimCloseJetpackGlb">
-        <Source Path="Characters/KerbalFemale/Anim/ANI_KSP_CloseJetpack.glb"/>
-        <Skeleton Id="KerbalFemaleGlb"/>
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_CloseJetpack"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <PbrMaterial Id="KerbalFemaleBody">
-        <Diffuse Path="Textures/Kerbal/Body.png" Category="Default"/>
-        <Normal Id="KerbalEmptyNormal"/>
-        <AoRoughMetal Path="Textures/Kerbal/ORM.png" Category="Default"/>
+        <Diffuse Ref="KSPCharacters.Textures.Kerbal.Body"/>
+        <Normal Ref="KSPCharacters.Textures.Kerbal.EmptyNormal"/>
+        <AoRoughMetal Ref="KSPCharacters.Textures.Kerbal.ORM"/>
     </PbrMaterial>
     <PbrMaterial Id="KerbalFemaleOrangeBody">
-        <Diffuse Path="Textures/Kerbal/Body_Orange.png" Category="Default"/>
-        <Normal Id="KerbalEmptyNormal"/>
-        <AoRoughMetal Path="Textures/Kerbal/ORM.png" Category="Default"/>
+        <Diffuse Ref="KSPCharacters.Textures.Kerbal.Body_Orange"/>
+        <Normal Ref="KSPCharacters.Textures.Kerbal.EmptyNormal"/>
+        <AoRoughMetal Ref="KSPCharacters.Textures.Kerbal.ORM"/>
     </PbrMaterial>
     <PbrMaterial Id="KerbalFemaleHead">
-        <Diffuse Path="Textures/KerbalFemale/Head.png" Category="Default"/>
-        <Normal Id="KerbalEmptyNormal"/>
-        <AoRoughMetal Path="Textures/Kerbal/ORM.png" Category="Default"/>
+        <Diffuse Ref="KSPCharacters.Textures.KerbalFemale.Head"/>
+        <Normal Ref="KSPCharacters.Textures.Kerbal.EmptyNormal"/>
+        <AoRoughMetal Ref="KSPCharacters.Textures.Kerbal.ORM"/>
     </PbrMaterial>
     <PbrMaterial Id="KerbalFemaleEye">
-        <Diffuse Path="Textures/Kerbal/Eye_A.png" Category="Default"/>
-        <Normal Id="KerbalEmptyNormal"/>
-        <AoRoughMetal Path="Textures/Kerbal/ORM.png" Category="Default"/>
+        <Diffuse Ref="KSPCharacters.Textures.Kerbal.Eye_A"/>
+        <Normal Ref="KSPCharacters.Textures.Kerbal.EmptyNormal"/>
+        <AoRoughMetal Ref="KSPCharacters.Textures.Kerbal.ORM"/>
+    </PbrMaterial>
+    <PbrMaterial Id="KerbalFemaleHelmet">
+        <Diffuse Ref="KSPCharacters.Textures.Kerbal.Body"/>
+        <Normal Ref="KSPCharacters.Textures.Kerbal.EmptyNormal"/>
+        <AoRoughMetal Ref="KSPCharacters.Textures.Kerbal.ORM"/>
+    </PbrMaterial>
+    <PbrMaterial Id="KerbalFemaleOrangeHelmet">
+        <Diffuse Ref="KSPCharacters.Textures.Kerbal.Body_Orange"/>
+        <Normal Ref="KSPCharacters.Textures.Kerbal.EmptyNormal"/>
+        <AoRoughMetal Ref="KSPCharacters.Textures.Kerbal.ORM"/>
+    </PbrMaterial>
+    <PbrMaterial Id="KerbalFemaleVisor">
+        <Diffuse Ref="KSPCharacters.Textures.Kerbal.Visor_A"/>
+        <Normal Ref="KSPCharacters.Textures.Kerbal.EmptyNormal"/>
+        <AoRoughMetal Ref="KSPCharacters.Textures.Kerbal.ORM"/>
+    </PbrMaterial>
+    <PbrMaterial Id="KerbalFemaleJetpack">
+        <Diffuse Ref="KSPCharacters.Textures.Kerbal.Jetpack"/>
+        <Normal Ref="KSPCharacters.Textures.Kerbal.EmptyNormal"/>
+        <AoRoughMetal Ref="KSPCharacters.Textures.Kerbal.ORM"/>
     </PbrMaterial>
     <CharacterTextures Id="KerbalFemaleTextures">
-        <CharacterBodyMaterial Id="KerbalFemaleBody"/>
-        <CharacterHeadMaterial Id="KerbalFemaleHead"/>
-        <CharacterEyeMaterial Id="KerbalFemaleEye"/>
+        <CharacterBodyMaterial Ref="KerbalFemaleBody"/>
+        <CharacterHeadMaterial Ref="KerbalFemaleHead"/>
+        <CharacterEyeMaterial Ref="KerbalFemaleEye"/>
     </CharacterTextures>
     <CharacterTextures Id="KerbalFemaleOrangeTextures">
-        <CharacterBodyMaterial Id="KerbalFemaleOrangeBody"/>
-        <CharacterHeadMaterial Id="KerbalFemaleHead"/>
-        <CharacterEyeMaterial Id="KerbalFemaleEye"/>
+        <CharacterBodyMaterial Ref="KerbalFemaleOrangeBody"/>
+        <CharacterHeadMaterial Ref="KerbalFemaleHead"/>
+        <CharacterEyeMaterial Ref="KerbalFemaleEye"/>
     </CharacterTextures>
     <CharacterCore Id="KerbalFemaleCore">
-        <BodySource Id="KerbalFemaleGlb"/>
+        <BodySource Ref="KerbalFemaleGlb"/>
         <LeftEyeBoneIndex Name="jntDrv_l_eyeEnd01"/>
         <RightEyeBoneIndex Name="jntDrv_r_eyeEnd01"/>
         <MaxBoneCount Value="256"/>
-        <HeadMeshIndices Value="0"/>
-        <HeadMeshIndices Value="1"/>
-        <HeadMeshIndices Value="2"/>
-        <HeadMeshIndices Value="3"/>
-        <HeadMeshIndices Value="5"/>
-        <HeadMeshIndices Value="6"/>
-        <HeadMeshIndices Value="7"/>
-        <HeadMeshIndices Value="8"/>
+        <HeadMeshIndices>
+            <MeshIndex Value="0"/>
+            <MeshIndex Value="1"/>
+            <MeshIndex Value="2"/>
+            <MeshIndex Value="3"/>
+            <MeshIndex Value="5"/>
+            <MeshIndex Value="6"/>
+            <MeshIndex Value="7"/>
+            <MeshIndex Value="8"/>
+        </HeadMeshIndices>
+        <SuitMeshIndices>
+            <MeshIndex Value="4"/>
+        </SuitMeshIndices>
     </CharacterCore>
     <CharacterFur Id="KerbalFemaleFur">
         <FurMeshIndex Value="8"/>
         <FurShellDepth Value="0"/>
-        <FurMaskTexture Path="Textures/Kerbal/Eye_A.png" Category="Default"/>
+        <FurMaskTexture Ref="KSPCharacters.Textures.Kerbal.Eye_A"/>
     </CharacterFur>
     <CharacterExpressions Id="KerbalFemaleExpressions">
         <ExpressionCenterIndex Name="EyeLidJoints_M"/>
-        <ExpressionScared Id="KerbalFemaleAnimExpScaredGlb"/>
-        <ExpressionHappy Id="KerbalFemaleAnimExpHappyGlb"/>
-        <ExpressionSad Id="KerbalFemaleAnimExpSadGlb"/>
-        <ExpressionAngry Id="KerbalFemaleAnimExpAngryGlb"/>
-        <ExpressionAwe Id="KerbalFemaleAnimExpAweGlb"/>
+        <ScaredExpressions>
+            <GltfFile Ref="KerbalFemaleAnimExpScaredGlb"/>
+        </ScaredExpressions>
+        <HappyExpressions>
+            <GltfFile Ref="KerbalFemaleAnimExpHappyGlb"/>
+        </HappyExpressions>
+        <SadExpressions>
+            <GltfFile Ref="KerbalFemaleAnimExpSadGlb"/>
+        </SadExpressions>
+        <AngryExpressions>
+            <GltfFile Ref="KerbalFemaleAnimExpAngryGlb"/>
+        </AngryExpressions>
+        <AweExpressions>
+            <GltfFile Ref="KerbalFemaleAnimExpAweGlb"/>
+        </AweExpressions>
     </CharacterExpressions>
     <CharacterAnimationMasks Id="KerbalFemaleAnimationMasks">
-        <EarMask Name="be_l_thumb_d01"/>
+        <EarMask>
+            <Bone Name="be_l_thumb_d01"/>
+        </EarMask>
     </CharacterAnimationMasks>
     <CharacterAttachment Id="KerbalFemaleHelmetAttachment">
-        <Source Id="KerbalFemaleHelmetGlb"/>
+        <Source Ref="KerbalFemaleHelmetGlb"/>
         <Socket Name="Head_M"/>
         <Materials>
-            <Diffuse Path="Textures/Kerbal/Body.png" Category="Default"/>
-            <Normal Id="KerbalEmptyNormal"/>
-            <AoRoughMetal Path="Textures/Kerbal/ORM.png" Category="Default"/>
+            <PbrMaterial Ref="KerbalFemaleHelmet"/>
         </Materials>
         <AttachmentType>Helmet</AttachmentType>
     </CharacterAttachment>
     <CharacterAttachment Id="KerbalFemaleOrangeHelmetAttachment">
-        <Source Id="KerbalFemaleHelmetGlb"/>
+        <Source Ref="KerbalFemaleHelmetGlb"/>
         <Socket Name="Head_M"/>
         <Materials>
-            <Diffuse Path="Textures/Kerbal/Body_Orange.png" Category="Default"/>
-            <Normal Id="KerbalEmptyNormal"/>
-            <AoRoughMetal Path="Textures/Kerbal/ORM.png" Category="Default"/>
+            <PbrMaterial Ref="KerbalFemaleOrangeHelmet"/>
         </Materials>
         <AttachmentType>Helmet</AttachmentType>
     </CharacterAttachment>
     <!-- the arms swing out and in with RCS: the game scrubs MMUArmRetractAnim from its start (RCS on) to its end (off);
-         Character Manager plays CharacterManager.MMUArmExtendAnim forward instead when RCS comes on -->
+         Character Manager plays the extend clip in CharacterManager.xml forward instead when RCS comes on -->
     <CharacterAttachment Id="KerbalFemaleJetpackAttachment">
-        <Source Id="KerbalFemaleJetpackGlb"/>
+        <Source Ref="KerbalFemaleJetpackGlb"/>
         <Socket Name="Chest_M"/>
         <Materials>
-            <Diffuse Path="Textures/Kerbal/Jetpack.png" Category="Default"/>
-            <Normal Id="KerbalEmptyNormal"/>
-            <AoRoughMetal Path="Textures/Kerbal/ORM.png" Category="Default"/>
+            <PbrMaterial Ref="KerbalFemaleJetpack"/>
         </Materials>
         <Transform>
             <Position X="0.0000" Y="0.0000" Z="0.0000"/>
@@ -249,113 +322,63 @@
             <Scale X="1.0000" Y="1.0000" Z="1.0000"/>
         </Transform>
         <AttachmentType>MMU</AttachmentType>
-        <!-- read by Character Manager: where each of the EVA part's nozzles draws its puff on this pack (part frame, metres) -->
-        <CharacterManager.RcsPuff Nozzle="TranslateRight1" X="-0.2191" Y="-0.1740" Z="-0.4012" DX="0.0193" DY="-0.9996" DZ="-0.0218"/>
-        <CharacterManager.RcsPuff Nozzle="TranslateRight2" X="-0.2410" Y="-0.1067" Z="-0.1978" DX="-0.1185" DY="-0.9929" DZ="-0.0044"/>
-        <CharacterManager.RcsPuff Nozzle="TranslateLeft1" X="-0.2208" Y="0.1791" Z="-0.4010" DX="0.1232" DY="0.9924" DZ="0.0038"/>
-        <CharacterManager.RcsPuff Nozzle="TranslateLeft2" X="-0.2452" Y="0.1078" Z="-0.1976" DX="0.1232" DY="0.9924" DZ="0.0038"/>
-        <CharacterManager.RcsPuff Nozzle="TranslateDown1" X="-0.2164" Y="0.1474" Z="-0.4190" DX="-0.1257" DY="0.5407" DZ="-0.8318"/>
-        <CharacterManager.RcsPuff Nozzle="TranslateDown2" X="-0.2186" Y="-0.1438" Z="-0.4151" DX="-0.0133" DY="-0.5914" DZ="-0.8063"/>
-        <CharacterManager.RcsPuff Nozzle="TranslateDown3" X="-0.2164" Y="0.1474" Z="-0.4190" DX="-0.1257" DY="0.5407" DZ="-0.8318"/>
-        <CharacterManager.RcsPuff Nozzle="TranslateDown4" X="-0.2186" Y="-0.1438" Z="-0.4151" DX="-0.0133" DY="-0.5914" DZ="-0.8063"/>
-        <CharacterManager.RcsPuff Nozzle="TranslateUp1" X="-0.2131" Y="0.0913" Z="-0.1646" DX="-0.0859" DY="0.2744" DZ="0.9578"/>
-        <CharacterManager.RcsPuff Nozzle="TranslateUp2" X="-0.2131" Y="-0.0878" Z="-0.1646" DX="-0.1070" DY="-0.3358" DZ="0.9358"/>
-        <CharacterManager.RcsPuff Nozzle="TranslateUp3" X="-0.2131" Y="0.0913" Z="-0.1646" DX="-0.0859" DY="0.2744" DZ="0.9578"/>
-        <CharacterManager.RcsPuff Nozzle="TranslateUp4" X="-0.2131" Y="-0.0878" Z="-0.1646" DX="-0.1070" DY="-0.3358" DZ="0.9358"/>
-        <CharacterManager.RcsPuff Nozzle="TranslateBackward1" X="-0.1747" Y="0.1550" Z="-0.3927" DX="0.8750" DY="0.4708" DZ="-0.1128"/>
-        <CharacterManager.RcsPuff Nozzle="TranslateBackward2" X="-0.1719" Y="-0.1597" Z="-0.3939" DX="0.9091" DY="-0.3789" DZ="-0.1733"/>
-        <CharacterManager.RcsPuff Nozzle="TranslateBackward3" X="-0.1483" Y="0.0799" Z="-0.1847" DX="0.8499" DY="0.5269" DZ="-0.0062"/>
-        <CharacterManager.RcsPuff Nozzle="TranslateBackward4" X="-0.1483" Y="-0.0776" Z="-0.1847" DX="0.9031" DY="-0.4294" DZ="0.0091"/>
-        <CharacterManager.RcsPuff Nozzle="TranslateForward1" X="-0.2665" Y="0.1456" Z="-0.4032" DX="-0.9721" DY="0.2268" DZ="0.0603"/>
-        <CharacterManager.RcsPuff Nozzle="TranslateForward2" X="-0.2702" Y="-0.1472" Z="-0.4017" DX="-0.9923" DY="-0.1157" DZ="0.0436"/>
-        <CharacterManager.RcsPuff Nozzle="TranslateForward3" X="-0.2748" Y="0.0762" Z="-0.1959" DX="-0.9882" DY="0.1382" DZ="0.0666"/>
-        <CharacterManager.RcsPuff Nozzle="TranslateForward4" X="-0.2740" Y="-0.0761" Z="-0.1950" DX="-0.9980" DY="-0.0138" DZ="0.0620"/>
-        <CharacterManager.RcsPuff Nozzle="PitchDownRollLeftYawRight1" X="-0.1483" Y="0.0799" Z="-0.1847" DX="0.8499" DY="0.5269" DZ="-0.0062"/>
-        <CharacterManager.RcsPuff Nozzle="PitchDownRollLeftYawRight2" X="-0.2702" Y="-0.1472" Z="-0.4017" DX="-0.9923" DY="-0.1157" DZ="0.0436"/>
-        <CharacterManager.RcsPuff Nozzle="PitchUpRollLeftYawLeft1" X="-0.2131" Y="0.0913" Z="-0.1646" DX="-0.0859" DY="0.2744" DZ="0.9578"/>
-        <CharacterManager.RcsPuff Nozzle="PitchUpRollLeftYawLeft2" X="-0.1719" Y="-0.1597" Z="-0.3939" DX="0.9091" DY="-0.3789" DZ="-0.1733"/>
-        <CharacterManager.RcsPuff Nozzle="PitchDownRollRightYawLeft1" X="-0.1483" Y="-0.0776" Z="-0.1847" DX="0.9031" DY="-0.4294" DZ="0.0091"/>
-        <CharacterManager.RcsPuff Nozzle="PitchDownRollRightYawLeft2" X="-0.2665" Y="0.1456" Z="-0.4032" DX="-0.9721" DY="0.2268" DZ="0.0603"/>
-        <CharacterManager.RcsPuff Nozzle="PitchUpRollRightYawRight1" X="-0.2131" Y="-0.0878" Z="-0.1646" DX="-0.1070" DY="-0.3358" DZ="0.9358"/>
-        <CharacterManager.RcsPuff Nozzle="PitchUpRollRightYawRight2" X="-0.1747" Y="0.1550" Z="-0.3927" DX="0.8750" DY="0.4708" DZ="-0.1128"/>
     </CharacterAttachment>
     <CharacterAttachment Id="KerbalFemaleVisorAttachment">
-        <Source Id="KerbalFemaleVisorGlb"/>
+        <Source Ref="KerbalFemaleVisorGlb"/>
         <Socket Name="Head_M"/>
         <Materials>
-            <Diffuse Path="Textures/Kerbal/Visor_A.png" Category="Default"/>
-            <Normal Id="KerbalEmptyNormal"/>
-            <AoRoughMetal Path="Textures/Kerbal/ORM.png" Category="Default"/>
+            <PbrMaterial Ref="KerbalFemaleVisor"/>
         </Materials>
         <AttachmentType>Visor</AttachmentType>
     </CharacterAttachment>
     <CharacterMMUAnimations Id="KerbalFemaleMMUAnimations">
-        <MMUIdleDefaultAnim Id="KerbalFemaleAnimJpSuspendedGlb"/>
-        <MMUMoveLeftLoopAnim Id="KerbalFemaleAnimJpSuspendedGlb"/>
-        <MMUMoveRightLoopAnim Id="KerbalFemaleAnimJpSuspendedGlb"/>
-        <MMUMoveForwardLoopAnim Id="KerbalFemaleAnimJpSuspendedGlb"/>
-        <MMUMoveBackwardLoopAnim Id="KerbalFemaleAnimJpSuspendedGlb"/>
-        <MMUMoveUpLoopAnim Id="KerbalFemaleAnimJpSuspendedGlb"/>
-        <MMUMoveDownLoopAnim Id="KerbalFemaleAnimJpSuspendedGlb"/>
-        <MMUArmRetractAnim Id="KerbalFemaleJetpackArmsGlb"/>
-        <CharacterManager.MMUArmExtendAnim Id="KerbalFemaleJetpackArmsExtendGlb"/>
+        <MMUIdleDefaultAnim Ref="KerbalFemaleAnimJpSuspendedGlb"/>
+        <MMUMoveLeftLoopAnim Ref="KerbalFemaleAnimJpSuspendedGlb"/>
+        <MMUMoveRightLoopAnim Ref="KerbalFemaleAnimJpSuspendedGlb"/>
+        <MMUMoveForwardLoopAnim Ref="KerbalFemaleAnimJpSuspendedGlb"/>
+        <MMUMoveBackwardLoopAnim Ref="KerbalFemaleAnimJpSuspendedGlb"/>
+        <MMUMoveUpLoopAnim Ref="KerbalFemaleAnimJpSuspendedGlb"/>
+        <MMUMoveDownLoopAnim Ref="KerbalFemaleAnimJpSuspendedGlb"/>
+        <MMUArmRetractAnim Ref="KerbalFemaleJetpackArmsGlb"/>
     </CharacterMMUAnimations>
     <CharacterGroundAnimations Id="KerbalFemaleGroundAnimations">
-        <AnimIdle Id="KerbalFemaleAnimIdleGlb"/>
-        <CharacterManager.AnimIdleRcs Id="KerbalFemaleAnimJpIdleGlb"/>
-        <CharacterManager.AnimRcsOn Id="KerbalFemaleAnimOpenJetpackGlb"/>
-        <CharacterManager.AnimRcsOff Id="KerbalFemaleAnimCloseJetpackGlb"/>
-        <CharacterManager.AnimIdleAction Id="KerbalFemaleAnimIdleAGlb"/>
-        <CharacterManager.AnimIdleAction Id="KerbalFemaleAnimIdleBGlb"/>
-        <CharacterManager.AnimIdleAction Id="KerbalFemaleAnimIdleCGlb"/>
-        <CharacterManager.AnimIdleAction Id="KerbalFemaleAnimIdleDGlb"/>
-        <CharacterManager.AnimIdleAction Id="KerbalFemaleAnimIdleEGlb"/>
-        <CharacterManager.AnimIdleAction Id="KerbalFemaleAnimIdleGGlb"/>
-        <CharacterManager.AnimIdleAction Id="KerbalFemaleAnimIdleIGlb"/>
-        <AnimWalk Id="KerbalFemaleAnimWkCForwardGlb"/>
-        <CharacterManager.AnimWalkRcs Id="KerbalFemaleAnimJpWkCForwardGlb"/>
-        <AnimRun Id="KerbalFemaleAnimWkCRunGlb"/>
-        <AnimLadder Id="KerbalFemaleAnimLadderUpGlb"/>
-        <CharacterManager.AnimLadderIdle Id="KerbalFemaleAnimLadderIdleGlb"/>
-        <CharacterManager.AnimLadderDown Id="KerbalFemaleAnimLadderDownGlb"/>
-        <AnimJump Id="KerbalFemaleAnimJumpStillStartGlb"/>
-        <CharacterManager.AnimJumpRcs Id="KerbalFemaleAnimJpJumpStillStartGlb"/>
-        <AnimTumble Id="KerbalFemaleAnimSuspendedGlb"/>
-        <CharacterManager.AnimTumbleRcs Id="KerbalFemaleAnimJpSuspendedGlb"/>
-        <AnimJumpLand Id="KerbalFemaleAnimJumpStillEndGlb"/>
-        <CharacterManager.AnimJumpLandRcs Id="KerbalFemaleAnimJpJumpStillEndGlb"/>
-        <AnimMoonWalk Id="KerbalFemaleAnimWkCLoGForwardGlb"/>
-        <CharacterManager.AnimMoonWalkRcs Id="KerbalFemaleAnimJpWkCLoGForwardGlb"/>
-        <AnimMoonRun Id="KerbalFemaleAnimWkCLoGForwardGlb"/>
-        <CharacterManager.AnimMoonRunRcs Id="KerbalFemaleAnimJpWkCLoGForwardGlb"/>
-        <AnimSwim Id="KerbalFemaleAnimSwimForwardGlb"/>
-        <AnimSwimIdle Id="KerbalFemaleAnimSwimIdleGlb"/>
-        <AnimSeatedIdle Id="KerbalFemaleAnimDockingGlb"/>
+        <AnimIdle Ref="KerbalFemaleAnimIdleGlb"/>
+        <AnimWalk Ref="KerbalFemaleAnimWkCForwardGlb"/>
+        <AnimRun Ref="KerbalFemaleAnimWkCRunGlb"/>
+        <AnimLadder Ref="KerbalFemaleAnimLadderUpGlb"/>
+        <AnimJump Ref="KerbalFemaleAnimJumpStillStartGlb"/>
+        <AnimTumble Ref="KerbalFemaleAnimSuspendedGlb"/>
+        <AnimJumpLand Ref="KerbalFemaleAnimJumpStillEndGlb"/>
+        <AnimMoonWalk Ref="KerbalFemaleAnimWkCLoGForwardGlb"/>
+        <AnimMoonRun Ref="KerbalFemaleAnimWkCLoGForwardGlb"/>
+        <AnimSwim Ref="KerbalFemaleAnimSwimForwardGlb"/>
+        <AnimSwimIdle Ref="KerbalFemaleAnimSwimIdleGlb"/>
+        <AnimSeatedIdle Ref="KerbalFemaleAnimDockingGlb"/>
     </CharacterGroundAnimations>
     <Character Id="KerbalFemale">
         <Personality Value="Neutral"/>
-        <CharacterCore Id="KerbalFemaleCore"/>
-        <CharacterTextures Id="KerbalFemaleTextures"/>
-        <CharacterHelmet Id="KerbalFemaleHelmetAttachment"/>
-        <CharacterVisor Id="KerbalFemaleVisorAttachment"/>
-        <CharacterMMU Id="KerbalFemaleJetpackAttachment"/>
-        <CharacterFur Id="KerbalFemaleFur"/>
-        <CharacterExpressions Id="KerbalFemaleExpressions"/>
-        <CharacterMMUAnimations Id="KerbalFemaleMMUAnimations"/>
-        <CharacterAnimationMasks Id="KerbalFemaleAnimationMasks"/>
-        <CharacterGroundAnimations Id="KerbalFemaleGroundAnimations"/>
+        <CharacterCore Ref="KerbalFemaleCore"/>
+        <CharacterTextures Ref="KerbalFemaleTextures"/>
+        <CharacterHelmet Ref="KerbalFemaleHelmetAttachment"/>
+        <CharacterVisor Ref="KerbalFemaleVisorAttachment"/>
+        <CharacterMMU Ref="KerbalFemaleJetpackAttachment"/>
+        <CharacterFur Ref="KerbalFemaleFur"/>
+        <CharacterExpressions Ref="KerbalFemaleExpressions"/>
+        <CharacterMMUAnimations Ref="KerbalFemaleMMUAnimations"/>
+        <CharacterAnimationMasks Ref="KerbalFemaleAnimationMasks"/>
+        <CharacterGroundAnimations Ref="KerbalFemaleGroundAnimations"/>
     </Character>
     <Character Id="KerbalFemaleOrange">
         <Personality Value="Neutral"/>
-        <CharacterCore Id="KerbalFemaleCore"/>
-        <CharacterTextures Id="KerbalFemaleOrangeTextures"/>
-        <CharacterHelmet Id="KerbalFemaleOrangeHelmetAttachment"/>
-        <CharacterVisor Id="KerbalFemaleVisorAttachment"/>
-        <CharacterMMU Id="KerbalFemaleJetpackAttachment"/>
-        <CharacterFur Id="KerbalFemaleFur"/>
-        <CharacterExpressions Id="KerbalFemaleExpressions"/>
-        <CharacterMMUAnimations Id="KerbalFemaleMMUAnimations"/>
-        <CharacterAnimationMasks Id="KerbalFemaleAnimationMasks"/>
-        <CharacterGroundAnimations Id="KerbalFemaleGroundAnimations"/>
+        <CharacterCore Ref="KerbalFemaleCore"/>
+        <CharacterTextures Ref="KerbalFemaleOrangeTextures"/>
+        <CharacterHelmet Ref="KerbalFemaleOrangeHelmetAttachment"/>
+        <CharacterVisor Ref="KerbalFemaleVisorAttachment"/>
+        <CharacterMMU Ref="KerbalFemaleJetpackAttachment"/>
+        <CharacterFur Ref="KerbalFemaleFur"/>
+        <CharacterExpressions Ref="KerbalFemaleExpressions"/>
+        <CharacterMMUAnimations Ref="KerbalFemaleMMUAnimations"/>
+        <CharacterAnimationMasks Ref="KerbalFemaleAnimationMasks"/>
+        <CharacterGroundAnimations Ref="KerbalFemaleGroundAnimations"/>
     </Character>
 </Assets>

@@ -23,6 +23,7 @@ If the Kerbal does not show up, open `Documents/My Games/Kitten Space Agency/man
 * `KerbalAssets.xml`, `KerbalFemaleAssets.xml`: the character definitions, male and female.
 * `Characters/Kerbal/`, `Characters/KerbalFemale/`: body, helmet, visor, jetpack (with its arm animations) and the animations, one file per KSP clip (slots that play the same clip share it). The female Kerbal has her own body and her own set of KSP's clips.
 * `Textures/Kerbal/`: the suit textures every Kerbal wears (`Body.png` the white suit, `Body_Orange.png` the orange one; the helmet uses the same file) and the male head, and the jetpack (`Jetpack.png`). `Textures/KerbalFemale/`: her head.
+* `CharacterManager.xml`: the extra clips (idle variants, ladder, RCS stance) and the RCS puff positions, for the optional Character Manager mod. The game itself doesn't load it.
 * `characters.toml`, `names/`: display names, KSP's Kerbal name lists and the fixed crew (Jebediah, Bill, Bob and Valentina Kerman), for the optional Character Manager mod. The game itself ignores them.
 
 ## Credits and legal
