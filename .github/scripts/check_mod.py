@@ -3,9 +3,10 @@
 
 Usage: check_mod.py [BASE_REF]
 
-Without BASE_REF it checks the files as they are: mod.toml, every file and Id
-KerbalAssets.xml refers to, the glTF files (header, chunks, bone names the XML
-and the animations use) and the textures. With BASE_REF (the branch a pull
+Without BASE_REF it checks the files as they are: mod.toml, every file and
+asset the asset XML refers to (KSA 2026.11.10.5801's format: Id names a
+top-level asset, Ref points at one), the glTF files (header, chunks, bone names
+the XML and the animations use), the textures and CharacterManager.xml. With BASE_REF (the branch a pull
 request goes into) it also checks the version: a change to a file that ships in
 the zip needs a new version in mod.toml, higher than every v* tag, with
 release-notes/v<version>.md.
@@ -25,6 +26,7 @@ SEMVER = re.compile(r"^(\d+)\.(\d+)\.(\d+)$")
 errors = []
 earlier_ids = set()  # Ids defined by the asset files mod.toml lists before the current one
 used_paths = set()  # files any asset file refers to
+all_assets = {}  # Id -> top-level element, over every asset file
 
 
 def error(msg):
@@ -102,10 +104,19 @@ def check_files():
             continue
         check_assets(asset, root)
         earlier_ids.update(el.attrib["Id"] for el in root if "Id" in el.attrib)
+        all_assets.update({el.attrib["Id"]: el for el in root if "Id" in el.attrib})
+    if "CharacterManager.xml" in assets:
+        error("mod.toml: CharacterManager.xml is not a game asset (the game rejects its fields)")
+    check_extensions(all_assets)
     shipped = set(git("ls-files", "Characters", "Textures").split())
     for f in sorted(shipped - used_paths):
         print(f"::warning::{f} ships in the zip but no asset file uses it")
     return version
+
+
+def ref(el):
+    """The asset an element points at: Ref since KSA 2026.11.10.5801 (Id before)."""
+    return el.attrib.get("Ref", el.attrib.get("Id"))
 
 
 def check_assets(asset, root):
@@ -115,14 +126,20 @@ def check_assets(asset, root):
             if el.attrib["Id"] in defined:
                 error(f"{asset}: Id {el.attrib['Id']} is defined twice")
             defined[el.attrib["Id"]] = el
+    known = {**{i: None for i in earlier_ids}, **defined}
 
-    # Nested Ids point at definitions; the mod defines everything it uses.
+    # Since KSA 5801 an Id only names a top-level asset; everything below points at one with Ref, and the mod defines
+    # everything it uses. The game drops a whole asset that holds an element it doesn't know.
     for top in root:
         for el in top.iter():
-            if el is top or "Id" not in el.attrib:
+            if el is top:
                 continue
-            if el.attrib["Id"] not in defined and el.attrib["Id"] not in earlier_ids:
-                error(f"{asset}: <{el.tag} Id=\"{el.attrib['Id']}\"> inside {top.attrib.get('Id', top.tag)} points at nothing")
+            if "Id" in el.attrib:
+                error(f"{asset}: <{el.tag} Id=\"{el.attrib['Id']}\"> inside {top.attrib.get('Id', top.tag)}: use Ref (Id only names a top-level asset)")
+            if "Ref" in el.attrib and el.attrib["Ref"] not in known:
+                error(f"{asset}: <{el.tag} Ref=\"{el.attrib['Ref']}\"> inside {top.attrib.get('Id', top.tag)} points at nothing")
+            if el.tag.startswith("CharacterManager."):
+                error(f"{asset}: <{el.tag}> inside {top.attrib.get('Id', top.tag)}: the game drops that asset; it belongs in CharacterManager.xml")
 
     used = set()
     for el in root.iter():
@@ -133,30 +150,34 @@ def check_assets(asset, root):
         f = ROOT / p
         if not f.is_file():
             error(f"{asset}: <{el.tag} Path=\"{p}\"> does not exist (paths are case sensitive)")
+        elif el.tag == "Texture":
+            check_texture(f)
+
+    def file_of(gltf_el):
+        """The file a GltfFile loads: its Source points at a File asset."""
+        src = gltf_el.find("Source")
+        f = known.get(ref(src)) if src is not None else None
+        return None if f is None or f.tag != "File" else ROOT / f.attrib.get("Path", "")
 
     gltf = {}
     for gid, el in defined.items():
         if el.tag != "GltfFile":
             continue
-        src = el.find("Source")
-        if src is None or not (ROOT / src.attrib.get("Path", "")).is_file():
+        f = file_of(el)
+        if f is None or not f.is_file():
+            error(f"{asset}: GltfFile {gid} has no File to load")
             continue
         try:
-            gltf[gid] = read_glb(ROOT / src.attrib["Path"])
+            gltf[gid] = read_glb(f)
         except (ValueError, json.JSONDecodeError, struct.error) as e:
-            error(f"{src.attrib['Path']}: {e}")
-
-    for el in root.iter():
-        p = el.attrib.get("Path", "")
-        if p and (ROOT / p).is_file() and el.tag != "Source":
-            check_texture(ROOT / p)
+            error(f"{f.relative_to(ROOT)}: {e}")
 
     # Animations drive the bones of their skeleton by name.
     for gid, el in defined.items():
         skel = el.find("Skeleton")
         if el.tag != "GltfFile" or skel is None or gid not in gltf:
             continue
-        sid = skel.attrib.get("Id")
+        sid = ref(skel)
         if sid not in gltf:
             continue
         doc = gltf[gid]
@@ -178,7 +199,7 @@ def check_assets(asset, root):
     # Bone names and mesh indices the character definition uses.
     for core in (e for e in root if e.tag == "CharacterCore"):
         body = core.find("BodySource")
-        doc = gltf.get(body.attrib.get("Id")) if body is not None else None
+        doc = gltf.get(ref(body)) if body is not None else None
         if doc is None:
             continue
         bones = {n.get("name") for n in doc.get("nodes", [])}
@@ -186,11 +207,31 @@ def check_assets(asset, root):
         for e in root.iter():
             name = e.attrib.get("Name")
             if name is not None and name not in bones:
-                error(f"{asset}: <{e.tag} Name=\"{name}\"> is not a bone of {body.attrib['Id']}")
-            if e.tag in ("HeadMeshIndices", "FurMeshIndex") and int(e.attrib["Value"]) >= meshes:
-                error(f"{asset}: <{e.tag} Value=\"{e.attrib['Value']}\"> but {body.attrib['Id']} has {meshes} meshes")
+                error(f"{asset}: <{e.tag} Name=\"{name}\"> is not a bone of {ref(body)}")
+            if e.tag in ("MeshIndex", "FurMeshIndex") and int(e.attrib["Value"]) >= meshes:
+                error(f"{asset}: <{e.tag} Value=\"{e.attrib['Value']}\"> but {ref(body)} has {meshes} meshes")
 
     used_paths.update(used)
+
+
+def check_extensions(all_ids):
+    """CharacterManager.xml, read only by the optional Character Manager: patches of the mod's own assets (Id with
+    Modify="Patch", the same kind of element), every Ref naming an asset of the mod. The game must not load it."""
+    path = ROOT / "CharacterManager.xml"
+    if not path.is_file():
+        return
+    try:
+        root = ET.parse(path).getroot()
+    except ET.ParseError as e:
+        error(f"CharacterManager.xml: {e}")
+        return
+    for block in root:
+        target = all_ids.get(block.attrib.get("Id"))
+        if block.attrib.get("Modify") != "Patch" or target is None or target.tag != block.tag:
+            error(f"CharacterManager.xml: <{block.tag} Id=\"{block.attrib.get('Id')}\"> patches no {block.tag} of the mod")
+        for el in block.iter():
+            if "Ref" in el.attrib and el.attrib["Ref"] not in all_ids:
+                error(f"CharacterManager.xml: <{el.tag} Ref=\"{el.attrib['Ref']}\"> points at nothing")
 
 
 def version_key(v):
