@@ -4,8 +4,8 @@ Copyright (c) 2026 Paulo Santana
 WHAT THIS LICENSE COVERS
 
 The MIT License below covers only my own work in this mod: the character
-definitions (KerbalAssets.xml, KerbalFemaleAssets.xml), characters.toml,
-mod.toml, README.md and this file.
+definitions (KerbalAssets.xml, KerbalFemaleAssets.xml, CharacterManager.xml),
+characters.toml, mod.toml, README.md and this file.
 
 It does NOT cover the following, which I do not own and have no license to:
 
@@ -16,9 +16,6 @@ It does NOT cover the following, which I do not own and have no license to:
   Division and their successors).
 * names/: the Kerbal name lists, taken from Kerbal Space Program's crew
   generator; same rights holders.
-* Characters/KittenMMU/, Textures/Characters/: the jetpack model, its arm
-  animation and textures, copied from Kitten Space Agency, (c) RocketWerkz /
-  Ahwoo.
 
 This is a fan project, not affiliated with or endorsed by any of them.
 

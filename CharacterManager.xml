@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Read by the optional Character Manager mod, which plays these clips and draws these RCS puffs. KSA itself doesn't
+     load this file (it isn't in mod.toml's assets): it rejects the CharacterManager. fields. Each block patches one of
+     this mod's assets, the way the game's own patches do. -->
+<Assets>
+    <!-- Kerbal -->
+    <CharacterGroundAnimations Id="KerbalGroundAnimations" Modify="Patch">
+        <CharacterManager.AnimIdleRcs Ref="KerbalAnimJpIdleGlb"/>
+        <CharacterManager.AnimRcsOn Ref="KerbalAnimOpenJetpackGlb"/>
+        <CharacterManager.AnimRcsOff Ref="KerbalAnimCloseJetpackGlb"/>
+        <CharacterManager.AnimWalkRcs Ref="KerbalAnimJpWkCForwardGlb"/>
+        <CharacterManager.AnimLadderIdle Ref="KerbalAnimLadderIdleGlb"/>
+        <CharacterManager.AnimLadderDown Ref="KerbalAnimLadderDownGlb"/>
+        <CharacterManager.AnimJumpRcs Ref="KerbalAnimJpJumpStillStartGlb"/>
+        <CharacterManager.AnimTumbleRcs Ref="KerbalAnimJpSuspendedGlb"/>
+        <CharacterManager.AnimJumpLandRcs Ref="KerbalAnimJpJumpStillEndGlb"/>
+        <CharacterManager.AnimMoonWalkRcs Ref="KerbalAnimJpWkCLoGForwardGlb"/>
+        <CharacterManager.AnimMoonRunRcs Ref="KerbalAnimJpWkCLoGForwardGlb"/>
+        <CharacterManager.AnimIdleActions>
+            <GltfFile Ref="KerbalAnimIdleAGlb"/>
+            <GltfFile Ref="KerbalAnimIdleBGlb"/>
+            <GltfFile Ref="KerbalAnimIdleCGlb"/>
+            <GltfFile Ref="KerbalAnimIdleDGlb"/>
+            <GltfFile Ref="KerbalAnimIdleFGlb"/>
+            <GltfFile Ref="KerbalAnimIdleGGlb"/>
+            <GltfFile Ref="KerbalAnimIdleIGlb"/>
+        </CharacterManager.AnimIdleActions>
+    </CharacterGroundAnimations>
+    <CharacterMMUAnimations Id="KerbalMMUAnimations" Modify="Patch">
+        <CharacterManager.MMUArmExtendAnim Ref="KerbalJetpackArmsExtendGlb"/>
+    </CharacterMMUAnimations>
+    <!-- where each of the EVA part's nozzles draws its puff on this jetpack (the part's frame, metres) -->
+    <CharacterAttachment Id="KerbalJetpackAttachment" Modify="Patch">
+        <CharacterManager.RcsPuffs>
+            <RcsPuff Nozzle="TranslateRight1" X="-0.2186" Y="-0.1740" Z="-0.4600" DX="0.0193" DY="-0.9996" DZ="-0.0218"/>
+            <RcsPuff Nozzle="TranslateRight2" X="-0.2406" Y="-0.1067" Z="-0.2566" DX="-0.1185" DY="-0.9929" DZ="-0.0044"/>
+            <RcsPuff Nozzle="TranslateLeft1" X="-0.2204" Y="0.1791" Z="-0.4599" DX="0.1232" DY="0.9924" DZ="0.0038"/>
+            <RcsPuff Nozzle="TranslateLeft2" X="-0.2448" Y="0.1078" Z="-0.2564" DX="0.1232" DY="0.9924" DZ="0.0038"/>
+            <RcsPuff Nozzle="TranslateDown1" X="-0.2160" Y="0.1474" Z="-0.4778" DX="-0.1257" DY="0.5407" DZ="-0.8318"/>
+            <RcsPuff Nozzle="TranslateDown2" X="-0.2181" Y="-0.1438" Z="-0.4739" DX="-0.0133" DY="-0.5914" DZ="-0.8063"/>
+            <RcsPuff Nozzle="TranslateDown3" X="-0.2160" Y="0.1474" Z="-0.4778" DX="-0.1257" DY="0.5407" DZ="-0.8318"/>
+            <RcsPuff Nozzle="TranslateDown4" X="-0.2181" Y="-0.1438" Z="-0.4739" DX="-0.0133" DY="-0.5914" DZ="-0.8063"/>
+            <RcsPuff Nozzle="TranslateUp1" X="-0.2126" Y="0.0913" Z="-0.2235" DX="-0.0859" DY="0.2744" DZ="0.9578"/>
+            <RcsPuff Nozzle="TranslateUp2" X="-0.2126" Y="-0.0878" Z="-0.2235" DX="-0.1070" DY="-0.3358" DZ="0.9358"/>
+            <RcsPuff Nozzle="TranslateUp3" X="-0.2126" Y="0.0913" Z="-0.2235" DX="-0.0859" DY="0.2744" DZ="0.9578"/>
+            <RcsPuff Nozzle="TranslateUp4" X="-0.2126" Y="-0.0878" Z="-0.2235" DX="-0.1070" DY="-0.3358" DZ="0.9358"/>
+            <RcsPuff Nozzle="TranslateBackward1" X="-0.1742" Y="0.1550" Z="-0.4515" DX="0.8750" DY="0.4708" DZ="-0.1128"/>
+            <RcsPuff Nozzle="TranslateBackward2" X="-0.1714" Y="-0.1597" Z="-0.4527" DX="0.9091" DY="-0.3789" DZ="-0.1733"/>
+            <RcsPuff Nozzle="TranslateBackward3" X="-0.1479" Y="0.0799" Z="-0.2435" DX="0.8499" DY="0.5269" DZ="-0.0062"/>
+            <RcsPuff Nozzle="TranslateBackward4" X="-0.1479" Y="-0.0776" Z="-0.2435" DX="0.9031" DY="-0.4294" DZ="0.0091"/>
+            <RcsPuff Nozzle="TranslateForward1" X="-0.2661" Y="0.1456" Z="-0.4621" DX="-0.9721" DY="0.2268" DZ="0.0603"/>
+            <RcsPuff Nozzle="TranslateForward2" X="-0.2698" Y="-0.1472" Z="-0.4605" DX="-0.9923" DY="-0.1157" DZ="0.0436"/>
+            <RcsPuff Nozzle="TranslateForward3" X="-0.2743" Y="0.0762" Z="-0.2547" DX="-0.9882" DY="0.1382" DZ="0.0666"/>
+            <RcsPuff Nozzle="TranslateForward4" X="-0.2736" Y="-0.0761" Z="-0.2538" DX="-0.9980" DY="-0.0138" DZ="0.0620"/>
+            <RcsPuff Nozzle="PitchDownRollLeftYawRight1" X="-0.1479" Y="0.0799" Z="-0.2435" DX="0.8499" DY="0.5269" DZ="-0.0062"/>
+            <RcsPuff Nozzle="PitchDownRollLeftYawRight2" X="-0.2698" Y="-0.1472" Z="-0.4605" DX="-0.9923" DY="-0.1157" DZ="0.0436"/>
+            <RcsPuff Nozzle="PitchUpRollLeftYawLeft1" X="-0.2126" Y="0.0913" Z="-0.2235" DX="-0.0859" DY="0.2744" DZ="0.9578"/>
+            <RcsPuff Nozzle="PitchUpRollLeftYawLeft2" X="-0.1714" Y="-0.1597" Z="-0.4527" DX="0.9091" DY="-0.3789" DZ="-0.1733"/>
+            <RcsPuff Nozzle="PitchDownRollRightYawLeft1" X="-0.1479" Y="-0.0776" Z="-0.2435" DX="0.9031" DY="-0.4294" DZ="0.0091"/>
+            <RcsPuff Nozzle="PitchDownRollRightYawLeft2" X="-0.2661" Y="0.1456" Z="-0.4621" DX="-0.9721" DY="0.2268" DZ="0.0603"/>
+            <RcsPuff Nozzle="PitchUpRollRightYawRight1" X="-0.2126" Y="-0.0878" Z="-0.2235" DX="-0.1070" DY="-0.3358" DZ="0.9358"/>
+            <RcsPuff Nozzle="PitchUpRollRightYawRight2" X="-0.1742" Y="0.1550" Z="-0.4515" DX="0.8750" DY="0.4708" DZ="-0.1128"/>
+        </CharacterManager.RcsPuffs>
+    </CharacterAttachment>
+    <!-- /Kerbal -->
+    <!-- KerbalFemale -->
+    <CharacterGroundAnimations Id="KerbalFemaleGroundAnimations" Modify="Patch">
+        <CharacterManager.AnimIdleRcs Ref="KerbalFemaleAnimJpIdleGlb"/>
+        <CharacterManager.AnimRcsOn Ref="KerbalFemaleAnimOpenJetpackGlb"/>
+        <CharacterManager.AnimRcsOff Ref="KerbalFemaleAnimCloseJetpackGlb"/>
+        <CharacterManager.AnimWalkRcs Ref="KerbalFemaleAnimJpWkCForwardGlb"/>
+        <CharacterManager.AnimLadderIdle Ref="KerbalFemaleAnimLadderIdleGlb"/>
+        <CharacterManager.AnimLadderDown Ref="KerbalFemaleAnimLadderDownGlb"/>
+        <CharacterManager.AnimJumpRcs Ref="KerbalFemaleAnimJpJumpStillStartGlb"/>
+        <CharacterManager.AnimTumbleRcs Ref="KerbalFemaleAnimJpSuspendedGlb"/>
+        <CharacterManager.AnimJumpLandRcs Ref="KerbalFemaleAnimJpJumpStillEndGlb"/>
+        <CharacterManager.AnimMoonWalkRcs Ref="KerbalFemaleAnimJpWkCLoGForwardGlb"/>
+        <CharacterManager.AnimMoonRunRcs Ref="KerbalFemaleAnimJpWkCLoGForwardGlb"/>
+        <CharacterManager.AnimIdleActions>
+            <GltfFile Ref="KerbalFemaleAnimIdleAGlb"/>
+            <GltfFile Ref="KerbalFemaleAnimIdleBGlb"/>
+            <GltfFile Ref="KerbalFemaleAnimIdleCGlb"/>
+            <GltfFile Ref="KerbalFemaleAnimIdleDGlb"/>
+            <GltfFile Ref="KerbalFemaleAnimIdleEGlb"/>
+            <GltfFile Ref="KerbalFemaleAnimIdleGGlb"/>
+            <GltfFile Ref="KerbalFemaleAnimIdleIGlb"/>
+        </CharacterManager.AnimIdleActions>
+    </CharacterGroundAnimations>
+    <CharacterMMUAnimations Id="KerbalFemaleMMUAnimations" Modify="Patch">
+        <CharacterManager.MMUArmExtendAnim Ref="KerbalFemaleJetpackArmsExtendGlb"/>
+    </CharacterMMUAnimations>
+    <!-- where each of the EVA part's nozzles draws its puff on this jetpack (the part's frame, metres) -->
+    <CharacterAttachment Id="KerbalFemaleJetpackAttachment" Modify="Patch">
+        <CharacterManager.RcsPuffs>
+            <RcsPuff Nozzle="TranslateRight1" X="-0.2191" Y="-0.1740" Z="-0.4012" DX="0.0193" DY="-0.9996" DZ="-0.0218"/>
+            <RcsPuff Nozzle="TranslateRight2" X="-0.2410" Y="-0.1067" Z="-0.1978" DX="-0.1185" DY="-0.9929" DZ="-0.0044"/>
+            <RcsPuff Nozzle="TranslateLeft1" X="-0.2208" Y="0.1791" Z="-0.4010" DX="0.1232" DY="0.9924" DZ="0.0038"/>
+            <RcsPuff Nozzle="TranslateLeft2" X="-0.2452" Y="0.1078" Z="-0.1976" DX="0.1232" DY="0.9924" DZ="0.0038"/>
+            <RcsPuff Nozzle="TranslateDown1" X="-0.2164" Y="0.1474" Z="-0.4190" DX="-0.1257" DY="0.5407" DZ="-0.8318"/>
+            <RcsPuff Nozzle="TranslateDown2" X="-0.2186" Y="-0.1438" Z="-0.4151" DX="-0.0133" DY="-0.5914" DZ="-0.8063"/>
+            <RcsPuff Nozzle="TranslateDown3" X="-0.2164" Y="0.1474" Z="-0.4190" DX="-0.1257" DY="0.5407" DZ="-0.8318"/>
+            <RcsPuff Nozzle="TranslateDown4" X="-0.2186" Y="-0.1438" Z="-0.4151" DX="-0.0133" DY="-0.5914" DZ="-0.8063"/>
+            <RcsPuff Nozzle="TranslateUp1" X="-0.2131" Y="0.0913" Z="-0.1646" DX="-0.0859" DY="0.2744" DZ="0.9578"/>
+            <RcsPuff Nozzle="TranslateUp2" X="-0.2131" Y="-0.0878" Z="-0.1646" DX="-0.1070" DY="-0.3358" DZ="0.9358"/>
+            <RcsPuff Nozzle="TranslateUp3" X="-0.2131" Y="0.0913" Z="-0.1646" DX="-0.0859" DY="0.2744" DZ="0.9578"/>
+            <RcsPuff Nozzle="TranslateUp4" X="-0.2131" Y="-0.0878" Z="-0.1646" DX="-0.1070" DY="-0.3358" DZ="0.9358"/>
+            <RcsPuff Nozzle="TranslateBackward1" X="-0.1747" Y="0.1550" Z="-0.3927" DX="0.8750" DY="0.4708" DZ="-0.1128"/>
+            <RcsPuff Nozzle="TranslateBackward2" X="-0.1719" Y="-0.1597" Z="-0.3939" DX="0.9091" DY="-0.3789" DZ="-0.1733"/>
+            <RcsPuff Nozzle="TranslateBackward3" X="-0.1483" Y="0.0799" Z="-0.1847" DX="0.8499" DY="0.5269" DZ="-0.0062"/>
+            <RcsPuff Nozzle="TranslateBackward4" X="-0.1483" Y="-0.0776" Z="-0.1847" DX="0.9031" DY="-0.4294" DZ="0.0091"/>
+            <RcsPuff Nozzle="TranslateForward1" X="-0.2665" Y="0.1456" Z="-0.4032" DX="-0.9721" DY="0.2268" DZ="0.0603"/>
+            <RcsPuff Nozzle="TranslateForward2" X="-0.2702" Y="-0.1472" Z="-0.4017" DX="-0.9923" DY="-0.1157" DZ="0.0436"/>
+            <RcsPuff Nozzle="TranslateForward3" X="-0.2748" Y="0.0762" Z="-0.1959" DX="-0.9882" DY="0.1382" DZ="0.0666"/>
+            <RcsPuff Nozzle="TranslateForward4" X="-0.2740" Y="-0.0761" Z="-0.1950" DX="-0.9980" DY="-0.0138" DZ="0.0620"/>
+            <RcsPuff Nozzle="PitchDownRollLeftYawRight1" X="-0.1483" Y="0.0799" Z="-0.1847" DX="0.8499" DY="0.5269" DZ="-0.0062"/>
+            <RcsPuff Nozzle="PitchDownRollLeftYawRight2" X="-0.2702" Y="-0.1472" Z="-0.4017" DX="-0.9923" DY="-0.1157" DZ="0.0436"/>
+            <RcsPuff Nozzle="PitchUpRollLeftYawLeft1" X="-0.2131" Y="0.0913" Z="-0.1646" DX="-0.0859" DY="0.2744" DZ="0.9578"/>
+            <RcsPuff Nozzle="PitchUpRollLeftYawLeft2" X="-0.1719" Y="-0.1597" Z="-0.3939" DX="0.9091" DY="-0.3789" DZ="-0.1733"/>
+            <RcsPuff Nozzle="PitchDownRollRightYawLeft1" X="-0.1483" Y="-0.0776" Z="-0.1847" DX="0.9031" DY="-0.4294" DZ="0.0091"/>
+            <RcsPuff Nozzle="PitchDownRollRightYawLeft2" X="-0.2665" Y="0.1456" Z="-0.4032" DX="-0.9721" DY="0.2268" DZ="0.0603"/>
+            <RcsPuff Nozzle="PitchUpRollRightYawRight1" X="-0.2131" Y="-0.0878" Z="-0.1646" DX="-0.1070" DY="-0.3358" DZ="0.9358"/>
+            <RcsPuff Nozzle="PitchUpRollRightYawRight2" X="-0.1747" Y="0.1550" Z="-0.3927" DX="0.8750" DY="0.4708" DZ="-0.1128"/>
+        </CharacterManager.RcsPuffs>
+    </CharacterAttachment>
+    <!-- /KerbalFemale -->
+</Assets>
