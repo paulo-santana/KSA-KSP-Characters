@@ -28,6 +28,9 @@
     </CharacterGroundAnimations>
     <CharacterMMUAnimations Id="KerbalMMUAnimations" Modify="Patch">
         <CharacterManager.MMUArmExtendAnim Ref="KerbalJetpackArmsExtendGlb"/>
+        <CharacterManager.MMUFloatAnim Ref="KerbalAnimSuspendedGlb"/>
+        <CharacterManager.MMUFloatRcsOnAnim Ref="KerbalAnimOpenJetpackFloatingGlb"/>
+        <CharacterManager.MMUFloatRcsOffAnim Ref="KerbalAnimCloseJetpackFloatingGlb"/>
     </CharacterMMUAnimations>
     <!-- where each of the EVA part's nozzles draws its puff on this jetpack (the part's frame, metres) -->
     <CharacterAttachment Id="KerbalJetpackAttachment" Modify="Patch">
@@ -88,6 +91,9 @@
     </CharacterGroundAnimations>
     <CharacterMMUAnimations Id="KerbalFemaleMMUAnimations" Modify="Patch">
         <CharacterManager.MMUArmExtendAnim Ref="KerbalFemaleJetpackArmsExtendGlb"/>
+        <CharacterManager.MMUFloatAnim Ref="KerbalFemaleAnimSuspendedGlb"/>
+        <CharacterManager.MMUFloatRcsOnAnim Ref="KerbalFemaleAnimOpenJetpackFloatingGlb"/>
+        <CharacterManager.MMUFloatRcsOffAnim Ref="KerbalFemaleAnimCloseJetpackFloatingGlb"/>
     </CharacterMMUAnimations>
     <!-- where each of the EVA part's nozzles draws its puff on this jetpack (the part's frame, metres) -->
     <CharacterAttachment Id="KerbalFemaleJetpackAttachment" Modify="Patch">
