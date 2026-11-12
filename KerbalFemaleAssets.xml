@@ -21,6 +21,8 @@
     <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_SwimIdle" Path="Characters/KerbalFemale/Anim/ANI_KSP_SwimIdle.glb"/>
     <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_Docking" Path="Characters/KerbalFemale/Anim/ANI_KSP_Docking.glb"/>
     <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_JpSuspended" Path="Characters/KerbalFemale/Anim/ANI_KSP_JpSuspended.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_OpenJetpackFloating" Path="Characters/KerbalFemale/Anim/ANI_KSP_OpenJetpackFloating.glb"/>
+    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_CloseJetpackFloating" Path="Characters/KerbalFemale/Anim/ANI_KSP_CloseJetpackFloating.glb"/>
     <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_ExpScared" Path="Characters/KerbalFemale/Anim/ANI_KSP_ExpScared.glb"/>
     <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_ExpHappy" Path="Characters/KerbalFemale/Anim/ANI_KSP_ExpHappy.glb"/>
     <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_ExpSad" Path="Characters/KerbalFemale/Anim/ANI_KSP_ExpSad.glb"/>
@@ -109,6 +111,14 @@
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimJpSuspendedGlb">
         <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_JpSuspended"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalFemaleAnimOpenJetpackFloatingGlb">
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_OpenJetpackFloating"/>
+        <Skeleton Ref="KerbalFemaleGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalFemaleAnimCloseJetpackFloatingGlb">
+        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_CloseJetpackFloating"/>
         <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimExpScaredGlb">
