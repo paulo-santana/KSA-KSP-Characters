@@ -32,7 +32,7 @@
         <CharacterManager.MMUFloatRcsOnAnim Ref="KerbalAnimOpenJetpackFloatingGlb"/>
         <CharacterManager.MMUFloatRcsOffAnim Ref="KerbalAnimCloseJetpackFloatingGlb"/>
     </CharacterMMUAnimations>
-    <!-- KSP's face blend: the bones it drives, then its tree (Expression, Variance, SecondaryVariance) -->
+    <!-- KSP's face blend and head blend: the bones each drives, then its tree (Expression, Variance, SecondaryVariance) -->
     <CharacterExpressions Id="KerbalExpressions" Modify="Patch">
         <CharacterManager.FaceBlend Gender="Male">
             <Bones>
@@ -231,6 +231,262 @@
                 </Child>
             </Blend>
         </CharacterManager.FaceBlend>
+        <CharacterManager.HeadBlend>
+            <Bones>
+                <Bone Name="bn_headPivot_b01"/>
+                <Bone Name="EyeJoint_L"/>
+                <Bone Name="jntDrv_l_eyeEnd01"/>
+                <Bone Name="EyeJoint_R"/>
+                <Bone Name="jntDrv_r_eyeEnd01"/>
+            </Bones>
+            <Blend Param="Expression">
+                <Child Threshold="-1">
+                    <Blend Param="Variance">
+                        <Child Threshold="0">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalAnimHeadRotationPanicShakeA_x167Glb"/>
+                                </Child>
+                                <Child Threshold="0.33">
+                                    <Clip Ref="KerbalAnimHeadRotationPanicShakeCircle_x200Glb"/>
+                                </Child>
+                                <Child Threshold="0.66">
+                                    <Clip Ref="KerbalAnimHeadRotationPanicShakeFront_x154Glb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalAnimHeadRotationZigzagMotion_x67Glb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="0.2">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalAnimHeadRotationFastAGlb"/>
+                                </Child>
+                                <Child Threshold="0.243868">
+                                    <Clip Ref="KerbalAnimHeadRotationFastAGlb"/>
+                                </Child>
+                                <Child Threshold="0.397641">
+                                    <Clip Ref="KerbalAnimHeadRotationFastBGlb"/>
+                                </Child>
+                                <Child Threshold="0.587264">
+                                    <Clip Ref="KerbalAnimHeadRotationFastBGlb"/>
+                                </Child>
+                                <Child Threshold="0.686792">
+                                    <Clip Ref="KerbalAnimHeadRotationFastCGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalAnimHeadRotationFastCGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="1">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalAnimHeadRotationPanicLookingUp_x154Glb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalAnimHeadRotationFastDGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                    </Blend>
+                </Child>
+                <Child Threshold="-0.5">
+                    <Blend Param="Variance">
+                        <Child Threshold="0">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalAnimHeadRotationBGlb"/>
+                                </Child>
+                                <Child Threshold="0.46962">
+                                    <Clip Ref="KerbalAnimHeadRotationBGlb"/>
+                                </Child>
+                                <Child Threshold="0.539874">
+                                    <Clip Ref="KerbalAnimHeadRotationStaringUpGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalAnimHeadRotationStaringUpGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="0.5">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookDownGlb"/>
+                                </Child>
+                                <Child Threshold="0.105852">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookLeftGlb"/>
+                                </Child>
+                                <Child Threshold="0.323888">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookUpperRightGlb"/>
+                                </Child>
+                                <Child Threshold="0.634708">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookUpGlb"/>
+                                </Child>
+                                <Child Threshold="0.892258">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookRightGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookRightGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="1">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalAnimHeadRotationAGlb"/>
+                                </Child>
+                                <Child Threshold="0.5">
+                                    <Clip Ref="KerbalAnimHeadRotationCGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalAnimHeadRotationBGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                    </Blend>
+                </Child>
+                <Child Threshold="0">
+                    <Blend Param="Variance">
+                        <Child Threshold="0">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalAnimHeadRotationIdleSwingGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="0.5">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookLeftGlb"/>
+                                </Child>
+                                <Child Threshold="0.207772">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookUpperRightGlb"/>
+                                </Child>
+                                <Child Threshold="0.552736">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookUpGlb"/>
+                                </Child>
+                                <Child Threshold="0.899788">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookRightGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookDownGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="1">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalAnimHeadRotationIdleRotationGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                    </Blend>
+                </Child>
+                <Child Threshold="0.51">
+                    <Blend Param="Variance">
+                        <Child Threshold="0">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalAnimHeadRotationLeanLeftGlb"/>
+                                </Child>
+                                <Child Threshold="0.41841">
+                                    <Clip Ref="KerbalAnimHeadRotationLeanLeftGlb"/>
+                                </Child>
+                                <Child Threshold="0.5">
+                                    <Clip Ref="KerbalAnimHeadRotationIdleSwingGlb"/>
+                                </Child>
+                                <Child Threshold="0.59">
+                                    <Clip Ref="KerbalAnimHeadRotationLeanRightGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalAnimHeadRotationLeanRightGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="0.5">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookLeftGlb"/>
+                                </Child>
+                                <Child Threshold="0.146154">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookLeftGlb"/>
+                                </Child>
+                                <Child Threshold="0.352747">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookUpperRightGlb"/>
+                                </Child>
+                                <Child Threshold="0.647619">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookUpGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookRightGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="1">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalAnimHeadRotationCGlb"/>
+                                </Child>
+                                <Child Threshold="0.5">
+                                    <Clip Ref="KerbalAnimHeadRotationGGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalAnimHeadRotationHGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                    </Blend>
+                </Child>
+                <Child Threshold="1">
+                    <Blend Param="Variance">
+                        <Child Threshold="0">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalAnimHeadRotationIdleRotation_x83Glb"/>
+                                </Child>
+                                <Child Threshold="0.5">
+                                    <Clip Ref="KerbalAnimHeadRotationAGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalAnimHeadRotationCGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="0.5">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookLeftGlb"/>
+                                </Child>
+                                <Child Threshold="0.333333">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookUpGlb"/>
+                                </Child>
+                                <Child Threshold="0.666667">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookDownGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookRightGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="1">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalAnimHeadRotationLeanLeftGlb"/>
+                                </Child>
+                                <Child Threshold="0.5">
+                                    <Clip Ref="KerbalAnimHeadRotationLongLookLeftGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalAnimHeadRotationLeanRightGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                    </Blend>
+                </Child>
+            </Blend>
+        </CharacterManager.HeadBlend>
     </CharacterExpressions>
     <!-- where each of the EVA part's nozzles draws its puff on this jetpack (the part's frame, metres) -->
     <CharacterAttachment Id="KerbalJetpackAttachment" Modify="Patch">
@@ -295,7 +551,7 @@
         <CharacterManager.MMUFloatRcsOnAnim Ref="KerbalFemaleAnimOpenJetpackFloatingGlb"/>
         <CharacterManager.MMUFloatRcsOffAnim Ref="KerbalFemaleAnimCloseJetpackFloatingGlb"/>
     </CharacterMMUAnimations>
-    <!-- KSP's face blend: the bones it drives, then its tree (Expression, Variance, SecondaryVariance) -->
+    <!-- KSP's face blend and head blend: the bones each drives, then its tree (Expression, Variance, SecondaryVariance) -->
     <CharacterExpressions Id="KerbalFemaleExpressions" Modify="Patch">
         <CharacterManager.FaceBlend Gender="Female">
             <Bones>
@@ -494,6 +750,262 @@
                 </Child>
             </Blend>
         </CharacterManager.FaceBlend>
+        <CharacterManager.HeadBlend>
+            <Bones>
+                <Bone Name="bn_headPivot_b01"/>
+                <Bone Name="EyeJoint_L"/>
+                <Bone Name="jntDrv_l_eyeEnd01"/>
+                <Bone Name="EyeJoint_R"/>
+                <Bone Name="jntDrv_r_eyeEnd01"/>
+            </Bones>
+            <Blend Param="Expression">
+                <Child Threshold="-1">
+                    <Blend Param="Variance">
+                        <Child Threshold="0">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationPanicShakeA_x167Glb"/>
+                                </Child>
+                                <Child Threshold="0.33">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationPanicShakeCircle_x200Glb"/>
+                                </Child>
+                                <Child Threshold="0.66">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationPanicShakeFront_x154Glb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationZigzagMotion_x67Glb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="0.2">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationFastAGlb"/>
+                                </Child>
+                                <Child Threshold="0.243868">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationFastAGlb"/>
+                                </Child>
+                                <Child Threshold="0.397641">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationFastBGlb"/>
+                                </Child>
+                                <Child Threshold="0.587264">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationFastBGlb"/>
+                                </Child>
+                                <Child Threshold="0.686792">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationFastCGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationFastCGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="1">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationPanicShakeA_x154Glb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationFastDGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                    </Blend>
+                </Child>
+                <Child Threshold="-0.5">
+                    <Blend Param="Variance">
+                        <Child Threshold="0">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationBGlb"/>
+                                </Child>
+                                <Child Threshold="0.46962">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationBGlb"/>
+                                </Child>
+                                <Child Threshold="0.539874">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationStaringUpGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationStaringUpGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="0.5">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookDownGlb"/>
+                                </Child>
+                                <Child Threshold="0.105852">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookLeftGlb"/>
+                                </Child>
+                                <Child Threshold="0.323888">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookUpperRightGlb"/>
+                                </Child>
+                                <Child Threshold="0.634708">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookUpGlb"/>
+                                </Child>
+                                <Child Threshold="0.892258">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookRightGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookRightGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="1">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationAGlb"/>
+                                </Child>
+                                <Child Threshold="0.5">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationCGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationBGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                    </Blend>
+                </Child>
+                <Child Threshold="0">
+                    <Blend Param="Variance">
+                        <Child Threshold="0">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationIdleSwingGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="0.5">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookLeftGlb"/>
+                                </Child>
+                                <Child Threshold="0.207772">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookUpperRightGlb"/>
+                                </Child>
+                                <Child Threshold="0.552736">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookUpGlb"/>
+                                </Child>
+                                <Child Threshold="0.899788">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookRightGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookDownGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="1">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationIdleRotationGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                    </Blend>
+                </Child>
+                <Child Threshold="0.51">
+                    <Blend Param="Variance">
+                        <Child Threshold="0">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLeanLeftGlb"/>
+                                </Child>
+                                <Child Threshold="0.41841">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLeanLeftGlb"/>
+                                </Child>
+                                <Child Threshold="0.5">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationIdleSwingGlb"/>
+                                </Child>
+                                <Child Threshold="0.59">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLeanRightGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLeanRightGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="0.5">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookLeftGlb"/>
+                                </Child>
+                                <Child Threshold="0.146154">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookLeftGlb"/>
+                                </Child>
+                                <Child Threshold="0.352747">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookUpperRightGlb"/>
+                                </Child>
+                                <Child Threshold="0.647619">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookUpGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookRightGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="1">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationCGlb"/>
+                                </Child>
+                                <Child Threshold="0.5">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationGGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationHGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                    </Blend>
+                </Child>
+                <Child Threshold="1">
+                    <Blend Param="Variance">
+                        <Child Threshold="0">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationIdleRotation_x83Glb"/>
+                                </Child>
+                                <Child Threshold="0.5">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationAGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationCGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="0.5">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookLeftGlb"/>
+                                </Child>
+                                <Child Threshold="0.333333">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookUpGlb"/>
+                                </Child>
+                                <Child Threshold="0.666667">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookDownGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLongLookRightGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                        <Child Threshold="1">
+                            <Blend Param="SecondaryVariance">
+                                <Child Threshold="0">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLeanLeftGlb"/>
+                                </Child>
+                                <Child Threshold="0.5">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationIdleSwingGlb"/>
+                                </Child>
+                                <Child Threshold="1">
+                                    <Clip Ref="KerbalFemaleAnimHeadRotationLeanRightGlb"/>
+                                </Child>
+                            </Blend>
+                        </Child>
+                    </Blend>
+                </Child>
+            </Blend>
+        </CharacterManager.HeadBlend>
     </CharacterExpressions>
     <!-- where each of the EVA part's nozzles draws its puff on this jetpack (the part's frame, metres) -->
     <CharacterAttachment Id="KerbalFemaleJetpackAttachment" Modify="Patch">

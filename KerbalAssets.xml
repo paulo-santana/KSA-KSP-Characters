@@ -71,6 +71,31 @@
     <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadFaceExpHappyExtremeVar1" Path="Characters/Kerbal/Anim/ANI_KSP_HeadFaceExpHappyExtremeVar1.glb"/>
     <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadFaceExpAmazedB" Path="Characters/Kerbal/Anim/ANI_KSP_HeadFaceExpAmazedB.glb"/>
     <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_FacialExpHappyA" Path="Characters/Kerbal/Anim/ANI_KSP_FacialExpHappyA.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationPanicShakeA_x167" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationPanicShakeA_x167.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationPanicShakeCircle_x200" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationPanicShakeCircle_x200.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationPanicShakeFront_x154" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationPanicShakeFront_x154.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationZigzagMotion_x67" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationZigzagMotion_x67.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationFastA" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationFastA.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationFastB" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationFastB.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationFastC" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationFastC.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationPanicLookingUp_x154" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationPanicLookingUp_x154.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationFastD" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationFastD.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationB" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationB.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationStaringUp" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationStaringUp.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationLongLookDown" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationLongLookDown.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationLongLookLeft" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationLongLookLeft.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationLongLookUpperRight" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationLongLookUpperRight.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationLongLookUp" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationLongLookUp.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationLongLookRight" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationLongLookRight.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationA" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationA.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationC" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationC.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationIdleSwing" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationIdleSwing.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationIdleRotation" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationIdleRotation.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationLeanLeft" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationLeanLeft.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationLeanRight" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationLeanRight.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationG" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationG.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationH" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationH.glb"/>
+    <File Id="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationIdleRotation_x83" Path="Characters/Kerbal/Anim/ANI_KSP_HeadRotationIdleRotation_x83.glb"/>
     <Texture Id="KSPCharacters.Textures.Kerbal.Body" Path="Textures/Kerbal/Body.png" Category="Default"/>
     <Texture Id="KSPCharacters.Textures.Kerbal.EmptyNormal" Path="Textures/Kerbal/EmptyNormal.png" Category="Default"/>
     <Texture Id="KSPCharacters.Textures.Kerbal.ORM" Path="Textures/Kerbal/ORM.png" Category="Default"/>
@@ -345,6 +370,106 @@
     </GltfFile>
     <GltfFile Id="KerbalAnimFacialExpHappyAGlb">
         <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_FacialExpHappyA"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationPanicShakeA_x167Glb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationPanicShakeA_x167"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationPanicShakeCircle_x200Glb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationPanicShakeCircle_x200"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationPanicShakeFront_x154Glb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationPanicShakeFront_x154"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationZigzagMotion_x67Glb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationZigzagMotion_x67"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationFastAGlb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationFastA"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationFastBGlb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationFastB"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationFastCGlb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationFastC"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationPanicLookingUp_x154Glb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationPanicLookingUp_x154"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationFastDGlb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationFastD"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationBGlb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationB"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationStaringUpGlb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationStaringUp"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationLongLookDownGlb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationLongLookDown"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationLongLookLeftGlb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationLongLookLeft"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationLongLookUpperRightGlb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationLongLookUpperRight"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationLongLookUpGlb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationLongLookUp"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationLongLookRightGlb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationLongLookRight"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationAGlb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationA"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationCGlb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationC"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationIdleSwingGlb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationIdleSwing"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationIdleRotationGlb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationIdleRotation"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationLeanLeftGlb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationLeanLeft"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationLeanRightGlb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationLeanRight"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationGGlb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationG"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationHGlb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationH"/>
+        <Skeleton Ref="KerbalGlb"/>
+    </GltfFile>
+    <GltfFile Id="KerbalAnimHeadRotationIdleRotation_x83Glb">
+        <Source Ref="KSPCharacters.Characters.Kerbal.Anim.ANI_KSP_HeadRotationIdleRotation_x83"/>
         <Skeleton Ref="KerbalGlb"/>
     </GltfFile>
     <PbrMaterial Id="KerbalBody">
