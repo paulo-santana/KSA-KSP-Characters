@@ -44,7 +44,6 @@
     <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_LadderDown" Path="Characters/KerbalFemale/Anim/ANI_KSP_LadderDown.glb"/>
     <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_OpenJetpack" Path="Characters/KerbalFemale/Anim/ANI_KSP_OpenJetpack.glb"/>
     <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_CloseJetpack" Path="Characters/KerbalFemale/Anim/ANI_KSP_CloseJetpack.glb"/>
-    <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_IdleAnimKFootStretch" Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleAnimKFootStretch.glb"/>
     <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_IdleAnimC" Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleAnimC.glb"/>
     <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_IdleAnimDDance" Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleAnimDDance.glb"/>
     <File Id="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_IdleAnimHNotDoingAnything" Path="Characters/KerbalFemale/Anim/ANI_KSP_IdleAnimHNotDoingAnything.glb"/>
@@ -255,10 +254,6 @@
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimCloseJetpackGlb">
         <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_CloseJetpack"/>
-        <Skeleton Ref="KerbalFemaleGlb"/>
-    </GltfFile>
-    <GltfFile Id="KerbalFemaleAnimIdleAnimKFootStretchGlb">
-        <Source Ref="KSPCharacters.Characters.KerbalFemale.Anim.ANI_KSP_IdleAnimKFootStretch"/>
         <Skeleton Ref="KerbalFemaleGlb"/>
     </GltfFile>
     <GltfFile Id="KerbalFemaleAnimIdleAnimCGlb">
@@ -625,7 +620,6 @@
         <AnimSwimIdle Ref="KerbalFemaleAnimSwimIdleGlb"/>
         <AnimSeatedIdle Ref="KerbalFemaleAnimIdleAnimNullGlb"/>
         <AnimSeatedIdleActions>
-            <GltfFile Ref="KerbalFemaleAnimIdleAnimKFootStretchGlb"/>
             <GltfFile Ref="KerbalFemaleAnimIdleAnimCGlb"/>
             <GltfFile Ref="KerbalFemaleAnimIdleAnimDDanceGlb"/>
             <GltfFile Ref="KerbalFemaleAnimIdleAnimHNotDoingAnythingGlb"/>
